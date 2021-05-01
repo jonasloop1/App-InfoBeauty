@@ -18,7 +18,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 mostrarTelaInicial();
             }
-        }, 200);
+        }, 2000);
     }
 
     private void mostrarTelaInicial() {

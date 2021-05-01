@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppInfoBeauty">
-        <activity android:name=".TelaLoginUsuario"></activity>
-        <activity android:name=".TelaLoginEmpresa" />
-        <activity android:name=".TelaCadastroUsuario" />
-        <activity android:name=".TelaCadastroEmpresa" />
-        <activity android:name=".TelaEscolhaEmpresa" />
-        <activity android:name=".TelaEscolhaUsuario" />
-        <activity android:name=".TelaInicial" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".TelaLoginUsuario" android:screenOrientation="portrait"></activity>
+        <activity android:name=".TelaLoginEmpresa" android:screenOrientation="portrait"/>
+        <activity android:name=".TelaCadastroUsuario" android:screenOrientation="portrait"/>
+        <activity android:name=".TelaCadastroEmpresa" android:screenOrientation="portrait"/>
+        <activity android:name=".TelaEscolhaEmpresa" android:screenOrientation="portrait"/>
+        <activity android:name=".TelaEscolhaUsuario" android:screenOrientation="portrait"/>
+        <activity android:name=".TelaInicial" android:screenOrientation="portrait"/>
+
+        <activity android:name=".SplashScreen" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
