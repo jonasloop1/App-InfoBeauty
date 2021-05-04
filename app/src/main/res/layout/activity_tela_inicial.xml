@@ -7,24 +7,9 @@
     android:background="#B5CCCB"
     tools:context=".TelaInicial">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="35dp"
-        android:layout_height="36dp"
-        android:fontFamily="@font/amita"
-        android:text="OU"
-        android:textColor="#605A58"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.696" />
-
     <Button
         android:id="@+id/button2"
-        android:layout_width="250dp"
+        android:layout_width="317dp"
         android:layout_height="54dp"
         android:text="Sou Profissional"
         app:backgroundTint="#605A58"
@@ -33,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.793" />
+        app:layout_constraintVertical_bias="0.818" />
 
     <Button
         android:id="@+id/button"
@@ -47,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.71" />
 
     <TextView
         android:id="@+id/textView2"
