@@ -23,7 +23,7 @@
 
     <Button
         android:id="@+id/button_tela_escolha_usuario"
-        android:layout_width="250dp"
+        android:layout_width="317dp"
         android:layout_height="54dp"
         android:elevation="2dp"
         android:onClick="telaEscolhaUsuario"
@@ -40,27 +40,27 @@
         android:id="@+id/textView2"
         android:layout_width="342dp"
         android:layout_height="46dp"
-        android:fontFamily="@font/amita"
-        android:text="Conectando Clientes e Profissionais"
+        android:fontFamily="sans-serif"
+        android:text="Conectando profissionais e clientes\n      Da forma mais rápida e prática"
         android:textColor="#605A58"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.951" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="306dp"
-        android:layout_height="287dp"
+        android:layout_width="333dp"
+        android:layout_height="333dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153"
+        app:layout_constraintVertical_bias="0.04"
         app:srcCompat="@drawable/infobeauty_logo1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
