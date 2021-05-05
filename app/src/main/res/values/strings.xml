@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">App-InfoBeauty</string>
+    <string name="navegacao_page_selected">%s pagina selecionada</string>
 </resources>

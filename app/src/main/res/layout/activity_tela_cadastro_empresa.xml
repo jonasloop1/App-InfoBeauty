@@ -103,6 +103,7 @@
         android:id="@+id/button10"
         android:layout_width="317dp"
         android:layout_height="49dp"
+        android:onClick="telaCadastraEmpresaNavegacao"
         android:text="Cadastrar"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"
