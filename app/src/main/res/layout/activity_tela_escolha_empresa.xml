@@ -19,10 +19,11 @@
         app:srcCompat="@drawable/infobeauty_logo1" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button_tela_login_empresa"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:elevation="2dp"
+        android:onClick="telaLoginEmpresa"
         android:text="Login"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,10 +33,11 @@
         app:layout_constraintVertical_bias="0.785" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button_tela_cadastrar_empresa"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:elevation="2dp"
+        android:onClick="telaCadastrarEmpresa"
         android:text="Cadastrar"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"

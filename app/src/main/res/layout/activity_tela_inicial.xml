@@ -8,9 +8,10 @@
     tools:context=".TelaInicial">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_tela_escolha_empresa"
         android:layout_width="317dp"
         android:layout_height="54dp"
+        android:onClick="telaEscolhaEmpresa"
         android:text="Sou Profissional"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,10 +22,11 @@
         app:layout_constraintVertical_bias="0.818" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_tela_escolha_usuario"
         android:layout_width="250dp"
         android:layout_height="54dp"
         android:elevation="2dp"
+        android:onClick="telaEscolhaUsuario"
         android:text="Sou Cliente"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"
