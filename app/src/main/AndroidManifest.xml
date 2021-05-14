@@ -4,12 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppInfoBeauty">
-        <activity android:name=".TelaNavegacao"></activity>
+        <activity
+            android:name=".TelaNavegacao"
+            android:label="@string/title_activity_tela_navegacao"
+            android:theme="@style/Theme.AppInfoBeauty.NoActionBar"></activity>
         <activity
             android:name=".TelaLoginUsuario"
             android:screenOrientation="portrait" />

@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">App-InfoBeauty</string>
     <string name="navegacao_page_selected">%s pagina selecionada</string>
+    <string name="title_activity_tela_navegacao">TelaNavegacao</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">InfoBeauty</string>
+    <string name="nav_header_subtitle">www.InfoBeauty.com.br</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>
