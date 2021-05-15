@@ -3,23 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_profile">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_profile"
         android:name="com.example.app_infobeauty.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="@string/menu_profile"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_dicas"
         android:name="com.example.app_infobeauty.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_dicas"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_configure"
         android:name="com.example.app_infobeauty.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_configure"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_help2"
+        android:name="com.example.app_infobeauty.ui.help.nav_help"
+        android:label="@string/menu_help"
+        tools:layout="@layout/fragment_nav_help" />
 </navigation>

@@ -1,12 +1,10 @@
 package com.example.app_infobeauty;
 
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -16,7 +14,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.app_infobeauty.databinding.ActivityTelaNavegacaoBinding;
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
 public class TelaNavegacao extends AppCompatActivity {
 
@@ -39,7 +36,7 @@ public class TelaNavegacao extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_profile, R.id.nav_dicas, R.id.nav_configure, R.id.nav_help)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_tela_navegacao);

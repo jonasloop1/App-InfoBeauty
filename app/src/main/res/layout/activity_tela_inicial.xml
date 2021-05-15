@@ -38,8 +38,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="342dp"
-        android:layout_height="46dp"
+        android:layout_width="340dp"
+        android:layout_height="64dp"
         android:fontFamily="sans-serif"
         android:text="Conectando profissionais e clientes\n      Da forma mais rápida e prática"
         android:textColor="#605A58"
