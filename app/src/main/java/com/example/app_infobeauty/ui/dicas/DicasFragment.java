@@ -1,4 +1,4 @@
-package com.example.app_infobeauty.ui.slideshow;
+package com.example.app_infobeauty.ui.dicas;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,24 +12,23 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.app_infobeauty.R;
-import com.example.app_infobeauty.databinding.FragmentSlideshowBinding;
+import com.example.app_infobeauty.databinding.FragmentDicasBinding;
 
-public class SlideshowFragment extends Fragment {
+public class DicasFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
-    private FragmentSlideshowBinding binding;
+    private DicasViewModel dicasViewModel;
+    private FragmentDicasBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        dicasViewModel =
+                new ViewModelProvider(this).get(DicasViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentDicasBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textGallery;
+        dicasViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

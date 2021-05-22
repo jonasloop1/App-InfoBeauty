@@ -1,4 +1,4 @@
-package com.example.app_infobeauty.ui.home;
+package com.example.app_infobeauty.ui.configure;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,24 +12,23 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.app_infobeauty.R;
-import com.example.app_infobeauty.databinding.FragmentHomeBinding;
+import com.example.app_infobeauty.databinding.FragmentConfigureBinding;
 
-public class HomeFragment extends Fragment {
+public class ConfigureFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
-    private FragmentHomeBinding binding;
+    private ConfigureViewModel configureViewModel;
+    private FragmentConfigureBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        configureViewModel =
+                new ViewModelProvider(this).get(ConfigureViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentConfigureBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textSlideshow;
+        configureViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.help.nav_help">
+    tools:context=".ui.exit.nav_exit">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="381dp"
-        android:layout_height="28dp"
+        android:layout_width="377dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

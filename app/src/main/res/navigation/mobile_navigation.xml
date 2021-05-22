@@ -7,24 +7,37 @@
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.app_infobeauty.ui.home.HomeFragment"
+        android:name="com.example.app_infobeauty.ui.profile.ProfileFragment"
         android:label="@string/menu_profile"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/nav_dicas"
-        android:name="com.example.app_infobeauty.ui.gallery.GalleryFragment"
+        android:name="com.example.app_infobeauty.ui.dicas.DicasFragment"
         android:label="@string/menu_dicas"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_dicas" />
 
     <fragment
         android:id="@+id/nav_configure"
-        android:name="com.example.app_infobeauty.ui.slideshow.SlideshowFragment"
+        android:name="com.example.app_infobeauty.ui.configure.ConfigureFragment"
         android:label="@string/menu_configure"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_configure" />
+
     <fragment
         android:id="@+id/nav_help2"
         android:name="com.example.app_infobeauty.ui.help.nav_help"
         android:label="@string/menu_help"
         tools:layout="@layout/fragment_nav_help" />
+
+    <fragment
+        android:id="@+id/nav_minha_agenda"
+        android:name="com.example.app_infobeauty.ui.minha_agenda.nav_minha_agenda"
+        android:label="fragment_nav_minha_agenda"
+        tools:layout="@layout/fragment_nav_minha_agenda" />
+
+    <fragment
+        android:id="@+id/nav_exit"
+        android:name="com.example.app_infobeauty.ui.exit.nav_exit"
+        android:label="fragment_nav_exit"
+        tools:layout="@layout/fragment_nav_exit" />
 </navigation>

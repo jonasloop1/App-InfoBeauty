@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.navigation.NavigationView;
@@ -41,18 +39,19 @@ public class TelaNavegacao extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_profile, R.id.nav_dicas, R.id.nav_configure, R.id.nav_help)
+                R.id.nav_profile, R.id.nav_minha_agenda, R.id.nav_dicas, R.id.nav_configure, R.id.nav_help, R.id.nav_exit)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_tela_navegacao);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
         MeowBottomNavigation bottomNavigation = findViewById(R.id.bottonNavigation);
 
         bottomNavigation.add(new MeowBottomNavigation.Model(ID_Home, R.drawable.ic_nav_home));
         bottomNavigation.add(new MeowBottomNavigation.Model(ID_Location, R.drawable.ic_nav_location));
-        bottomNavigation.add(new MeowBottomNavigation.Model(ID_Calendar, R.drawable.ic_nav_calendar));
+        bottomNavigation.add(new MeowBottomNavigation.Model(ID_Calendar, R.drawable.ic_nav_calendario));
 
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
@@ -92,13 +91,6 @@ public class TelaNavegacao extends AppCompatActivity {
     public void location(View view){
         Intent intent = new Intent(this, Maps_InfoBeauty.class);
         startActivity(intent);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.tela_navegacao, menu);
-        return true;
     }
 
     @Override

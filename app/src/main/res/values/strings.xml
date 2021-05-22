@@ -7,12 +7,13 @@
     <string name="nav_header_title">InfoBeauty</string>
     <string name="nav_header_subtitle"><a>http://www.InfoBeauty.com.br</a></string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="menu_profile">Meu perfil</string>
     <string name="menu_dicas">Dicas</string>
+    <string name="menu_minha_agenda">Minha agenda</string>
     <string name="menu_configure">Configurações</string>
     <string name="menu_help">Help</string>
+    <string name="menu_sair">Sair</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps__info_beauty">Map</string>
