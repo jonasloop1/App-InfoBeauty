@@ -19,10 +19,9 @@
         app:srcCompat="@drawable/infobeauty_logo1" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/cadastrarUsuario"
         android:layout_width="317dp"
         android:layout_height="49dp"
-        android:onClick="telaCadastroUsuarioNavegacao"
         android:text="Cadastrar"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,7 +31,7 @@
         app:layout_constraintVertical_bias="0.923" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/emailUsuario"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -50,7 +49,7 @@
         android:text="E-mail:"
         android:textColor="#605A58"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextEmailAddress2"
+        app:layout_constraintBottom_toBottomOf="@+id/emailUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +57,7 @@
         app:layout_constraintVertical_bias="0.882" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/nomeUsuario"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -76,7 +75,7 @@
         android:text="Digite seu nome:"
         android:textColor="#605A58"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/nomeUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +83,7 @@
         app:layout_constraintVertical_bias="0.838" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/senhaUsuario"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -102,7 +101,7 @@
         android:text="Digite sua senha:"
         android:textColor="#605A58"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword3"
+        app:layout_constraintBottom_toBottomOf="@+id/senhaUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
