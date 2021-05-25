@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "Crud.db";
+    private static final String DATABASE_NAME = "Infobeaty.db";
     private static final int DATABASE_VERSION = 1;
     private final String CREATE_TABLE = "CREATE TABLE Usuario (ID INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT NOT NULL, Email TEXT NOT NULL, Senha TEXT NOT NULL);";
 

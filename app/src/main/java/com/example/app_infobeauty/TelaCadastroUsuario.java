@@ -1,11 +1,16 @@
 package com.example.app_infobeauty;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.utils.widget.MotionTelltales;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -41,11 +46,53 @@ public class TelaCadastroUsuario extends AppCompatActivity {
                     txtEmail.setText("");
                     txtSenha.setText("");
 
-                    Snackbar.make(view, "Salvou!", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    AlertDialog.Builder alerta = new AlertDialog.Builder(TelaCadastroUsuario.this);
+                    alerta.setTitle("Aviso");
+                    alerta
+
+                        .setIcon(R.drawable.ic_baseline_check_circle_24)
+                        .setMessage("Cadastro feito com Sucesso!")
+                        .setCancelable(true)
+                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
+                            @Override
+                            public void onClick(DialogInterface dialog, int which){
+                                Toast.makeText(getApplicationContext(), "Cancelar escolhido", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setPositiveButton ("OK", new DialogInterface.OnClickListener(){
+                            @Override
+                            public void onClick(DialogInterface dialog, int which){
+                                Toast.makeText(getApplicationContext(), "OK escolhido", Toast.LENGTH_SHORT).show();
+
+                            }
+                    });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+
+
                 }else{
-                    Snackbar.make(view, "Erro ao salvar, consulte os logs!", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+
+                    AlertDialog.Builder alerta = new AlertDialog.Builder(TelaCadastroUsuario.this);
+                    alerta.setTitle("Aviso");
+                    alerta
+
+                            .setIcon(R.drawable.ic_baseline_error_24)
+                            .setMessage("Cadastro feito com Sucesso!")
+                            .setCancelable(true)
+                            .setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
+                                @Override
+                                public void onClick(DialogInterface dialog, int which){
+                                    Toast.makeText(getApplicationContext(), "Cancelar escolhido", Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .setPositiveButton ("OK", new DialogInterface.OnClickListener(){
+                                @Override
+                                public void onClick(DialogInterface dialog, int which){
+                                    Toast.makeText(getApplicationContext(), "OK escolhido", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
                 }
             }
         });
