@@ -3,7 +3,6 @@ package com.example.app_infobeauty;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -16,9 +15,9 @@ public class Maps_InfoBeauty extends FragmentActivity implements OnMapReadyCallb
     private GoogleMap mMap;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps__info_beauty);
+    protected void onCreate( Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.fragment_location);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);

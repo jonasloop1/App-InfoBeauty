@@ -7,62 +7,32 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_tela_navegacao">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="location"
-        android:text="Mapa"
-        android:textColor="#FF0000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:backgroundTint="#605A58"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.808" />
-
-    <SearchView
-        android:layout_width="315dp"
-        android:layout_height="38dp"
-        android:background="#EDE5E5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
-
-    <TextView
-        android:id="@+id/pagina_selecionada"
-        android:layout_width="354dp"
-        android:layout_height="52dp"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="411dp"
+        android:layout_height="683dp"
+        android:layout_marginTop="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
-        android:id="@+id/bottonNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:mbn_backgroundBottomColor="@color/backgroundBottomColor"
-        app:mbn_circleColor="@color/circleColor"
-        app:mbn_countBackgroundColor="@color/countBackgroundColor"
-        app:mbn_countTextColor="@color/countTextColor"
-        app:mbn_defaultIconColor="@color/defaultIconColor"
-        app:mbn_selectedIconColor="@color/selectedIconColor"
-        app:mbn_shadowColor="@color/shadowColor" />
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+            android:id="@+id/bottonNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+            app:mbn_backgroundBottomColor="@color/backgroundBottomColor"
+            app:mbn_circleColor="@color/circleColor"
+            app:mbn_countBackgroundColor="@color/countBackgroundColor"
+            app:mbn_countTextColor="@color/countTextColor"
+            app:mbn_defaultIconColor="@color/defaultIconColor"
+            app:mbn_selectedIconColor="@color/selectedIconColor"
+            app:mbn_shadowColor="@color/shadowColor" />
+    </FrameLayout>
 
     <fragment
         android:id="@+id/nav_host_fragment_content_tela_navegacao"

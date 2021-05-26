@@ -3,12 +3,16 @@ package com.example.app_infobeauty;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -20,7 +24,6 @@ import com.example.app_infobeauty.databinding.ActivityTelaNavegacaoBinding;
 
 public class TelaNavegacao extends AppCompatActivity {
 
-    TextView pagina_selecionada;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityTelaNavegacaoBinding binding;
     private final int ID_Home = 1;
@@ -48,15 +51,16 @@ public class TelaNavegacao extends AppCompatActivity {
 
 
         MeowBottomNavigation bottomNavigation = findViewById(R.id.bottonNavigation);
-
         bottomNavigation.add(new MeowBottomNavigation.Model(ID_Home, R.drawable.ic_nav_home));
         bottomNavigation.add(new MeowBottomNavigation.Model(ID_Location, R.drawable.ic_nav_location));
         bottomNavigation.add(new MeowBottomNavigation.Model(ID_Calendar, R.drawable.ic_nav_calendario));
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentHome()).commit();
+
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
-                //Toast.makeText(TelaNavegacao.this, "clicked item: " + item.getId(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "clicked item: " + item.getId(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -64,33 +68,30 @@ public class TelaNavegacao extends AppCompatActivity {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
 
+                Fragment seleciona_fragment = null;
                 String name;
                 switch (item.getId()) {
                     case ID_Home:
                         name = "Home";
+                        seleciona_fragment = new FragmentHome();
                         break;
 
                     case ID_Location:
                         name = "location";
+                        seleciona_fragment = new FragmentLocation();
                         break;
 
                     case ID_Calendar:
                         name = "Calendar";
+                        seleciona_fragment = new FragmentCalendar();
                         break;
 
                     default:
                         name = "";
                 }
-                pagina_selecionada = (TextView) findViewById(R.id.pagina_selecionada);
-                pagina_selecionada.setText(getString(R.string.navegacao_page_selected, name));
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, seleciona_fragment).commit();
             }
         });
-        bottomNavigation.show(ID_Home, true);
-    }
-
-    public void location(View view){
-        Intent intent = new Intent(this, Maps_InfoBeauty.class);
-        startActivity(intent);
     }
 
     @Override
@@ -98,5 +99,27 @@ public class TelaNavegacao extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_tela_navegacao);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public boolean onNavigationItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if(id == R.drawable.ic_nav_profile){
+
+        }else if(id == R.drawable.ic_nav_minha_agenda){
+
+        }else if(id == R.drawable.ic_nav_dicas){
+
+        }else if(id == R.drawable.ic_nav_settins){
+
+        }else if(id == R.drawable.ic_nav_help){
+
+        }else if(id == R.drawable.ic_nav_exit){
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
