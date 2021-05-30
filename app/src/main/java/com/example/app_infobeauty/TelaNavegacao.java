@@ -104,17 +104,17 @@ public class TelaNavegacao extends AppCompatActivity {
     public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
 
-        if(id == R.drawable.ic_nav_profile){
+        if(id == R.id.nav_profile){
 
-        }else if(id == R.drawable.ic_nav_minha_agenda){
+        }else if(id == R.id.nav_minha_agenda){
 
-        }else if(id == R.drawable.ic_nav_dicas){
+        }else if(id == R.id.nav_dicas){
 
-        }else if(id == R.drawable.ic_nav_settins){
+        }else if(id == R.id.nav_configure){
 
-        }else if(id == R.drawable.ic_nav_help){
+        }else if(id == R.id.nav_help){
 
-        }else if(id == R.drawable.ic_nav_exit){
+        }else if(id == R.id.nav_exit){
 
         }
 

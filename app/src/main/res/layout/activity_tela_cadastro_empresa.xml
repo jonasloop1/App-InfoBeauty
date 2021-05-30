@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/infobeauty_logo1" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/nomeEmpresa"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -38,7 +38,7 @@
         android:text="Nome do estabelecimento:"
         android:textColor="#605A58"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toBottomOf="@+id/nomeEmpresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress4"
+        android:id="@+id/emailEmpresa"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -65,7 +65,7 @@
         android:text="E-mail:"
         android:textColor="#605A58"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextEmailAddress4"
+        app:layout_constraintBottom_toBottomOf="@+id/emailEmpresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +79,7 @@
         android:text="Digite sua senha:"
         android:textColor="#605A58"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword4"
+        app:layout_constraintBottom_toBottomOf="@+id/senhaEmpresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
         app:layout_constraintVertical_bias="0.906" />
 
     <EditText
-        android:id="@+id/editTextTextPassword4"
+        android:id="@+id/senhaEmpresa"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.731" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/cadastrarEmpresa"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:onClick="telaCadastraEmpresaNavegacao"

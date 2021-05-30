@@ -2,17 +2,14 @@ package com.example.app_infobeauty;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.utils.widget.MotionTelltales;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
 
 import java.io.Serializable;
 
@@ -37,6 +34,16 @@ public class TelaCadastroUsuario extends AppCompatActivity {
                 String email = txtEmail.getText().toString();
                 String senha = txtSenha.getText().toString();
 
+                //if (email.equals("") || senha.equals("")|| nome.equals("")){
+                  //  Toast.makeText(getApplicationContext(), "Fields are Empty", Toast.LENGTH_SHORT).show();
+               // }
+               // else{
+                 //   if (senha.equals(nome)){
+                        //Boolean chkemail = db.chkemail(email);
+                        //if (chkemail==)
+                    //}
+                //}
+
                 //salvando os dados
                 UsuarioDAO dao = new UsuarioDAO(getBaseContext());
                 boolean sucesso = dao.salvar(nome, email, senha);
@@ -52,13 +59,6 @@ public class TelaCadastroUsuario extends AppCompatActivity {
 
                         .setIcon(R.drawable.ic_baseline_check_circle_24)
                         .setMessage("Cadastro feito com Sucesso!")
-                        .setCancelable(true)
-                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
-                            @Override
-                            public void onClick(DialogInterface dialog, int which){
-                                Toast.makeText(getApplicationContext(), "Cancelar escolhido", Toast.LENGTH_SHORT).show();
-                            }
-                        })
                         .setPositiveButton ("OK", new DialogInterface.OnClickListener(){
                             @Override
                             public void onClick(DialogInterface dialog, int which){
