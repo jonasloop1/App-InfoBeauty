@@ -1,16 +1,10 @@
 package com.example.app_infobeauty;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.navigation.NavigationView;
-
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -43,7 +37,7 @@ public class TelaNavegacao extends AppCompatActivity {
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_profile, R.id.nav_minha_agenda, R.id.nav_dicas, R.id.nav_configure, R.id.nav_help, R.id.nav_exit)
-                .setDrawerLayout(drawer)
+                .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_tela_navegacao);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -101,7 +95,7 @@ public class TelaNavegacao extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    public boolean onNavigationItemSelected(MenuItem item){
+    /*public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
 
         if(id == R.id.nav_profile){
@@ -121,5 +115,5 @@ public class TelaNavegacao extends AppCompatActivity {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
+    }*/
 }

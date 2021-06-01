@@ -32,12 +32,12 @@
     <fragment
         android:id="@+id/nav_minha_agenda"
         android:name="com.example.app_infobeauty.ui.minha_agenda.nav_minha_agenda"
-        android:label="fragment_nav_minha_agenda"
+        android:label="@string/menu_minha_agenda"
         tools:layout="@layout/fragment_nav_minha_agenda" />
 
     <fragment
         android:id="@+id/nav_exit"
         android:name="com.example.app_infobeauty.ui.exit.nav_exit"
-        android:label="fragment_nav_exit"
+        android:label="@string/menu_sair"
         tools:layout="@layout/fragment_nav_exit" />
 </navigation>

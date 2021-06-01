@@ -6,16 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.minha_agenda.nav_minha_agenda">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="383dp"
-        android:layout_height="36dp"
+        android:id="@+id/text_minha_agenda"
+        android:layout_width="398dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center"
+        android:text="Minha Agenda"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Minha Agenda" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

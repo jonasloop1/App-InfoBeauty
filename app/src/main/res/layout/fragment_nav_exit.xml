@@ -6,10 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.exit.nav_exit">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="377dp"
-        android:layout_height="30dp"
+        android:id="@+id/text_exit"
+        android:layout_width="398dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center"
         android:text="Exit"
         android:textSize="24sp"

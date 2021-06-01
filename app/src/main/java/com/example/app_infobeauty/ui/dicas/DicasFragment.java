@@ -27,7 +27,7 @@ public class DicasFragment extends Fragment {
         binding = FragmentDicasBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
+        final TextView textView = binding.textDicas;
         dicasViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
