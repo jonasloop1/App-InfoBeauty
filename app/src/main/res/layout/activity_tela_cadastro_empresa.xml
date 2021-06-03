@@ -1,113 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#B5CCCB"
+    android:orientation="vertical"
     tools:context=".TelaCadastroEmpresa">
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
         app:srcCompat="@drawable/infobeauty_logo1" />
-
-    <EditText
-        android:id="@+id/nomeEmpresa"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="76dp"
         android:text="Nome do estabelecimento:"
         android:textColor="#605A58"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/nomeEmpresa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+         />
 
     <EditText
-        android:id="@+id/emailEmpresa"
+        android:id="@+id/nomeEmpresa"
         android:layout_width="317dp"
         android:layout_height="49dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.568" />
+        android:inputType="textPersonName"
+        android:layout_gravity="center"
+         />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="76dp"
         android:text="E-mail:"
         android:textColor="#605A58"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/emailEmpresa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.986" />
+         />
+
+    <EditText
+        android:id="@+id/emailEmpresa"
+        android:layout_width="317dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center"
+         />
+
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CNPJ:"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="76dp"
+        android:textColor="#605A58"
+        android:textSize="18sp"
+        />
+
+    <EditText
+        android:id="@+id/cnpjEmpresa"
+        android:layout_width="317dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Digite sua senha:"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="76dp"
         android:textColor="#605A58"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/senhaEmpresa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
+         />
 
     <EditText
         android:id="@+id/senhaEmpresa"
         android:layout_width="317dp"
         android:layout_height="49dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.731" />
+        android:layout_gravity="center"
+         />
 
-    <Button
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repita sua senha:"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="76dp"
+        android:textColor="#605A58"
+        android:textSize="18sp"
+        />
+
+    <EditText
+        android:id="@+id/confirmasenhaEmpresa"
+        android:layout_width="317dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        />
+
+        <Button
         android:id="@+id/cadastrarEmpresa"
         android:layout_width="317dp"
         android:layout_height="49dp"
-        android:onClick="telaCadastraEmpresaNavegacao"
+        android:layout_marginBottom="20dp"
         android:text="Cadastrar"
+        android:layout_gravity="center"
         app:backgroundTint="#605A58"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
