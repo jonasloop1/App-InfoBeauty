@@ -5,6 +5,16 @@
       <map>
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.2203125" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/side_nav_bar.xml" value="0.2203125" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_servicos_empresas.xml" value="0.22" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_splash_screen.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_empresa.xml" value="0.22" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_usuario.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_escolha_empresa.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_escolha_usuario.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_inicial.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_login_empresa.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_login_usuario.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_navegacao.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/app_bar_tela_navegacao.xml" value="0.1" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/content_tela_navegacao.xml" value="0.17" />

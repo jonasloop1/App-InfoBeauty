@@ -129,15 +129,15 @@
         android:layout_gravity="center"
         />
 
-        <Button
-        android:id="@+id/cadastrarEmpresa"
+    <Button
+        android:id="@+id/proximoEmpresaCadastro"
         android:layout_width="317dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="20dp"
-        android:text="Cadastrar"
         android:layout_gravity="center"
-        app:backgroundTint="#605A58"
-        />
+        android:layout_marginBottom="20dp"
+        android:onClick="proximoEmpresaCadastro"
+        android:text="Próximo"
+        app:backgroundTint="#605A58" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

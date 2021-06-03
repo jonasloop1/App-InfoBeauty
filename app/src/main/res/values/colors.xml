@@ -8,12 +8,4 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="selectedIconColor">#143937</color>
-    <color name="defaultIconColor">#143937</color>
-    <color name="countTextColor">#FF018786</color>
-    <color name="countBackgroundColor">#605A58</color>
-    <color name="circleColor">#fff</color>
-    <color name="backgroundBottomColor">#B5CCCB</color>
-    <color name="shadowColor">#2E2E2E</color>
-
 </resources>
