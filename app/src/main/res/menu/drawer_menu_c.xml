@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_perfil_c"
+            android:icon="@drawable/ic_meu_perfil_c"
+            android:title="Meu Perfil"/>
+
+        <item android:id="@+id/nav_location_c"
+            android:icon="@drawable/ic_location_c"
+            android:title="Localização"/>
+
+        <item android:id="@+id/nav_agendamentos_c"
+            android:icon="@drawable/ic_agendamentos_c"
+            android:title="Meus Agendamentos"/>
+
+        <item android:id="@+id/nav_favoritos_c"
+            android:icon="@drawable/ic_meus_favoritos_c"
+            android:title="Meus Favoritos"/>
+
+        <item android:id="@+id/nav_configure_c"
+            android:icon="@drawable/ic_configure_c"
+            android:title="Configuração"/>
+    </group>
+
+    <item android:title="Outros">
+        <menu>
+            <item android:id="@+id/nav_help_c"
+                android:icon="@drawable/ic_help_c"
+                android:title="Ajuda"/>
+
+            <item android:id="@+id/nav_exit_c"
+                android:icon="@drawable/ic_exit_c"
+                android:title="Sair"/>
+        </menu>
+    </item>
+
+</menu>
