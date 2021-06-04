@@ -16,7 +16,7 @@ public class TelaLoginEmpresa extends AppCompatActivity {
 
     public void telaLoginEmpresaNavegacao(View view){
 
-        //Intent intent = new Intent(this, TelaNavegacao.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, TelaNavegacaoEmpresa.class);
+        startActivity(intent);
     }
 }

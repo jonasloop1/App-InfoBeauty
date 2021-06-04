@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_estabelecimento"
+            android:icon="@drawable/ic_meu_estabelecimento"
+            android:title="Meu estabelecimento"/>
+
+        <item android:id="@+id/nav_meus_servicos"
+            android:icon="@drawable/ic_meus_servicos_e"
+            android:title="Meus Serviços"/>
+
+        <item android:id="@+id/nav_location"
+            android:icon="@drawable/ic_location_e"
+            android:title="Localização"/>
+
+        <item android:id="@+id/nav_agendamentos"
+            android:icon="@drawable/ic_agendamentos_e"
+            android:title="Agendamentos"/>
+
+        <item android:id="@+id/nav_adicionar_servicos"
+            android:icon="@drawable/ic_adicionar_servicos_e"
+            android:title="Adicionar Serviços"/>
+
+        <item android:id="@+id/nav_configure"
+            android:icon="@drawable/ic_configure_e"
+            android:title="Configuração"/>
+    </group>
+
+    <item android:title="Outros">
+        <menu>
+            <item android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help_e"
+                android:title="Ajuda"/>
+
+            <item android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_exit_e"
+                android:title="Sair"/>
+        </menu>
+    </item>
+
+</menu>
