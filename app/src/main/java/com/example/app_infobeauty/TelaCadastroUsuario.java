@@ -70,30 +70,7 @@ public class TelaCadastroUsuario extends AppCompatActivity {
                     alertDialog.show();
 
 
-                }else{
-
-                    AlertDialog.Builder alerta = new AlertDialog.Builder(TelaCadastroUsuario.this);
-                    alerta.setTitle("Aviso");
-                    alerta
-
-                            .setIcon(R.drawable.ic_baseline_error_24)
-                            .setMessage("Cadastro feito com Sucesso!")
-                            .setCancelable(true)
-                            .setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
-                                @Override
-                                public void onClick(DialogInterface dialog, int which){
-                                    Toast.makeText(getApplicationContext(), "Cancelar escolhido", Toast.LENGTH_SHORT).show();
-                                }
-                            })
-                            .setPositiveButton ("OK", new DialogInterface.OnClickListener(){
-                                @Override
-                                public void onClick(DialogInterface dialog, int which){
-                                    Toast.makeText(getApplicationContext(), "OK escolhido", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                    AlertDialog alertDialog = alerta.create();
-                    alertDialog.show();
-                }
+                }else{}
             }
         });
 

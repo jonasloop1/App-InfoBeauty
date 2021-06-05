@@ -8,137 +8,137 @@
     android:fillViewport="true"
     android:orientation="vertical">
 
-<androidx.appcompat.widget.LinearLayoutCompat
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#B5CCCB"
-    android:orientation="vertical"
-    tools:context=".TelaCadastroEmpresa">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B5CCCB"
+        android:orientation="vertical"
+        tools:context=".TelaCadastroEmpresa">
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="50dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/infobeauty_logo1" />
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="50dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/infobeauty_logo1" />
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="76dp"
-        android:text="Nome do estabelecimento:"
-        android:textColor="#605A58"
-        android:textSize="18sp"
-         />
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="76dp"
+            android:text="Nome do estabelecimento:"
+            android:textColor="#605A58"
+            android:textSize="18sp"
+            />
 
-    <EditText
-        android:id="@+id/nomeEmpresa"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_gravity="center"
-         />
+        <EditText
+            android:id="@+id/nomeEmpresa"
+            android:layout_width="317dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="76dp"
-        android:text="E-mail:"
-        android:textColor="#605A58"
-        android:textSize="18sp"
-         />
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="76dp"
+            android:text="E-mail:"
+            android:textColor="#605A58"
+            android:textSize="18sp"
+            />
 
-    <EditText
-        android:id="@+id/emailEmpresa"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:layout_gravity="center"
-         />
-
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CNPJ:"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="76dp"
-        android:textColor="#605A58"
-        android:textSize="18sp"
-        />
-
-    <EditText
-        android:id="@+id/cnpjEmpresa"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:layout_gravity="center"
-        />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Digite sua senha:"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="76dp"
-        android:textColor="#605A58"
-        android:textSize="18sp"
-         />
-
-    <EditText
-        android:id="@+id/senhaEmpresa"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:layout_gravity="center"
-         />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Repita sua senha:"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="76dp"
-        android:textColor="#605A58"
-        android:textSize="18sp"
-        />
-
-    <EditText
-        android:id="@+id/confirmasenhaEmpresa"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:layout_gravity="center"
-        />
-
-    <Button
-        android:id="@+id/proximoEmpresaCadastro"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:onClick="proximoEmpresaCadastro"
-        android:text="Próximo"
-        app:backgroundTint="#605A58" />
+        <EditText
+            android:id="@+id/emailEmpresa"
+            android:layout_width="317dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center"
+            />
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CNPJ:"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="76dp"
+            android:textColor="#605A58"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/cnpjEmpresa"
+            android:layout_width="317dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digite sua senha:"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="76dp"
+            android:textColor="#605A58"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/senhaEmpresa"
+            android:layout_width="317dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repita sua senha:"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="76dp"
+            android:textColor="#605A58"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/confirmasenhaEmpresa"
+            android:layout_width="317dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/proximoEmpresaCadastro"
+            android:layout_width="317dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:onClick="proximoEmpresaCadastro"
+            android:text="Cadastrar"
+            app:backgroundTint="#605A58" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>
