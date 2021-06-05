@@ -1,5 +1,6 @@
 package com.example.app_infobeauty;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;

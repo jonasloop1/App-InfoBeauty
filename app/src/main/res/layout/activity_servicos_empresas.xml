@@ -110,6 +110,7 @@
         android:id="@+id/cadastrarEmpresas"
         android:layout_width="317dp"
         android:layout_height="wrap_content"
+        android:onClick="chamarTelaNavegacaoEmpresa"
         android:text="Próximo"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"

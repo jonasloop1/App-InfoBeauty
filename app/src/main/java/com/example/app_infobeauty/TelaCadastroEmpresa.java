@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import java.io.Serializable;
 
+import javax.security.auth.login.LoginException;
+
 public class TelaCadastroEmpresa extends AppCompatActivity {
 
     @Override
@@ -56,18 +58,16 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
                     alerta
 
                             .setIcon(R.drawable.ic_baseline_check_circle_24)
-                            .setMessage("Cadastro feito com Sucesso!")
-                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    Toast.makeText(getApplicationContext(), "OK escolhido", Toast.LENGTH_SHORT).show();
-                                }
-                            });
+                            .setMessage("Cadastro feito com Sucesso!");
+
                     AlertDialog alertDialog = alerta.create();
                     alertDialog.show();
 
 
                 }else{ }
+
+                Intent intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
+                startActivity(intent);
             }
         });
 
@@ -92,11 +92,56 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
         }
 
         public int getId_E(){ return this.id_E; }
-        public String getNome_E(){ return this.nome_E; }
-        public String getEmail_E(){ return this.email_E; }
-        public String getCnpj_E(){ return this.cnpj_E; }
-        public String getSenha_E(){ return this.senha_E; }
-        public String getConfirmasenha_E(){ return this.confirmasenha_E; }
+
+        public String getNome_E(){
+            return this.nome_E;
+        }
+
+        public void setNome_E(String nome_E) {
+            if (!nome_E.isEmpty()) {
+                this.nome_E = nome_E;
+            }
+        }
+
+        public String getEmail_E(){
+            return this.email_E;
+        }
+
+        public void setEmail_E(String email_E) {
+            if (!email_E.isEmpty()) {
+                this.email_E = email_E;
+            }
+        }
+
+        public String getCnpj_E(){
+            return this.cnpj_E;
+        }
+
+        public void setCnpj_E(String cnpj_E) {
+            if (!cnpj_E.isEmpty()) {
+                this.cnpj_E = cnpj_E;
+            }
+        }
+
+        public String getSenha_E(){
+            return this.senha_E;
+        }
+
+        public void setSenha_E(String senha_E) {
+            if (!senha_E.isEmpty()) {
+                this.senha_E = senha_E;
+            }
+        }
+
+        public String getConfirmasenha_E(){
+            return this.confirmasenha_E;
+        }
+
+        public void setConfirmasenha_E(String confirmasenha_E) {
+            if (!confirmasenha_E.isEmpty()) {
+                this.confirmasenha_E = confirmasenha_E;
+            }
+        }
 
         @Override
         public boolean equals(Object o){

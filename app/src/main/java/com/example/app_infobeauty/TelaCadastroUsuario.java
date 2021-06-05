@@ -58,14 +58,8 @@ public class TelaCadastroUsuario extends AppCompatActivity {
                     alerta
 
                         .setIcon(R.drawable.ic_baseline_check_circle_24)
-                        .setMessage("Cadastro feito com Sucesso!")
-                        .setPositiveButton ("OK", new DialogInterface.OnClickListener(){
-                            @Override
-                            public void onClick(DialogInterface dialog, int which){
-                                Toast.makeText(getApplicationContext(), "OK escolhido", Toast.LENGTH_SHORT).show();
+                        .setMessage("Cadastro feito com Sucesso!");
 
-                            }
-                    });
                     AlertDialog alertDialog = alerta.create();
                     alertDialog.show();
 
@@ -90,9 +84,36 @@ public class TelaCadastroUsuario extends AppCompatActivity {
         }
 
         public int getId(){ return this.id; }
-        public String getNome(){ return this.nome; }
-        public String getEmail(){ return this.email; }
-        public String getSenha(){ return this.senha; }
+
+        public String getNome(){
+            return this.nome;
+        }
+
+        public void setNome(String nome) {
+            if (!nome.isEmpty()) {
+                this.nome = nome;
+            }
+        }
+
+        public String getEmail(){
+            return this.email;
+        }
+
+        public void setEmail(String email) {
+            if (!email.isEmpty()) {
+                this.email = email;
+            }
+        }
+
+        public String getSenha(){
+            return this.senha;
+        }
+
+        public void setSenha(String senha) {
+            if (!senha.isEmpty()) {
+                this.senha = senha;
+            }
+        }
 
         @Override
         public boolean equals(Object o){

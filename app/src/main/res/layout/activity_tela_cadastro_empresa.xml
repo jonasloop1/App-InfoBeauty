@@ -135,7 +135,6 @@
             android:layout_height="49dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:onClick="proximoEmpresaCadastro"
             android:text="Cadastrar"
             app:backgroundTint="#605A58" />
 

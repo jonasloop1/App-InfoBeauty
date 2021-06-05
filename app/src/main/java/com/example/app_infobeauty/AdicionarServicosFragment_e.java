@@ -16,4 +16,5 @@ public class AdicionarServicosFragment_e extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_adicionar_servicos_e, container, false);
     }
+
 }

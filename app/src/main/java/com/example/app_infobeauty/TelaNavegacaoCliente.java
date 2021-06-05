@@ -63,6 +63,7 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
                 Toast.makeText(this, "Ajuda", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_exit_c:
+                finish();
                 Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
                 break;
         }
