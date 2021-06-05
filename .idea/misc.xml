@@ -59,7 +59,7 @@
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_login_empresa.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_login_usuario.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_navegacao.xml" value="0.19701086956521738" />
-        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_navegacao_cliente.xml" value="0.22" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_navegacao_cliente.xml" value="0.25" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_navegacao_empresa.xml" value="0.22" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/app_bar_tela_navegacao.xml" value="0.1" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/app_bar_tela_navegacao_cliente.xml" value="0.1802536231884058" />
@@ -70,13 +70,17 @@
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_ajuda.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_calendar.xml" value="0.18568840579710144" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_configuracao.xml" value="0.16394927536231885" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_configuracao_c.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_configure.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_dicas.xml" value="0.1" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_home.xml" value="0.19" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_localizacao.xml" value="0.16394927536231885" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_localizacao_c.xml" value="0.2006340579710145" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_localizacao_e.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_meu_estabelecimento_e.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_meu_perfil.xml" value="0.2" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_meu_perfil_c.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_meus_favoritos_c.xml" value="0.2006340579710145" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_meus_servicos_e.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_minha_agenda.xml" value="0.15760869565217392" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_nav_exit.xml" value="0.1897644927536232" />

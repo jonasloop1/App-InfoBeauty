@@ -28,6 +28,10 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+        db.execSQL("DROP TABLE IF EXISTS TABLE_EMPRESA");
+        db.execSQL("DROP TABLE IF EXISTS TABLE_USUARIO");
+        db.execSQL("DROP TABLE IF EXISTS TABLE_SERVICOS");
+        onCreate(db);
     }
     //Verificação se o email existe
     //public  Boolean chkemail (String email){

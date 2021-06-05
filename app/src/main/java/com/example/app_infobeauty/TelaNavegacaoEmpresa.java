@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.io.Serializable;
 import java.text.MessageFormat;
 
 public class TelaNavegacaoEmpresa extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -83,6 +84,82 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }
+    }
+
+    public static class Empresa implements Serializable {
+
+        private int id_E;
+        private String nome_E;
+        private String email_E;
+        private String cnpj_E;
+        private String senha_E;
+        private String confirmasenha_E;
+
+        public Empresa(int id_E, String nome_E, String email_E,String cnpj_E ,String senha_E, String confirmasenha_E){
+            this.id_E = id_E;
+            this.nome_E = nome_E;
+            this.email_E = email_E;
+            this.cnpj_E = cnpj_E;
+            this.senha_E = senha_E;
+            this.confirmasenha_E = confirmasenha_E;
+        }
+
+        public int getId_E(){ return this.id_E; }
+
+        public String getNome_E(){
+            return this.nome_E;
+        }
+
+        public void setNome_E(String nome_E) {
+            if (!nome_E.isEmpty()) {
+                this.nome_E = nome_E;
+            }
+        }
+
+        public String getEmail_E(){
+            return this.email_E;
+        }
+
+        public void setEmail_E(String email_E) {
+            if (!email_E.isEmpty()) {
+                this.email_E = email_E;
+            }
+        }
+
+        public String getCnpj_E(){
+            return this.cnpj_E;
+        }
+
+        public void setCnpj_E(String cnpj_E) {
+            if (!cnpj_E.isEmpty()) {
+                this.cnpj_E = cnpj_E;
+            }
+        }
+
+        public String getSenha_E(){
+            return this.senha_E;
+        }
+
+        public void setSenha_E(String senha_E) {
+            if (!senha_E.isEmpty()) {
+                this.senha_E = senha_E;
+            }
+        }
+
+        public String getConfirmasenha_E(){
+            return this.confirmasenha_E;
+        }
+
+        public void setConfirmasenha_E(String confirmasenha_E) {
+            if (!confirmasenha_E.isEmpty()) {
+                this.confirmasenha_E = confirmasenha_E;
+            }
+        }
+
+        @Override
+        public int hashCode(){
+            return this.id_E;
         }
     }
 }

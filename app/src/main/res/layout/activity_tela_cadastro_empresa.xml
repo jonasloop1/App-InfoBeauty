@@ -83,7 +83,7 @@
             android:layout_height="49dp"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:inputType="textPassword"
+            android:inputType="textPersonName"
             android:layout_gravity="center"
             />
 
