@@ -1,8 +1,11 @@
-package com.example.app_infobeauty;
+package com.example.app_infobeauty.usuario;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.app_infobeauty.DbGateway;
+
 import java.util.ArrayList;
 import java.util.List;
 

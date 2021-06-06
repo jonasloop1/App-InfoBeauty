@@ -12,31 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".TelaNavegacaoCliente"
+            android:name=".usuario.TelaNavegacaoCliente"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".TelaNavegacaoEmpresa"
+            android:name=".empresa.TelaNavegacaoEmpresa"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ServicosEmpresas"
+            android:name=".empresa.ServicosEmpresas"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TelaLoginUsuario"
+            android:name=".usuario.TelaLoginUsuario"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TelaLoginEmpresa"
+            android:name=".empresa.TelaLoginEmpresa"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TelaCadastroUsuario"
+            android:name=".usuario.TelaCadastroUsuario"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TelaCadastroEmpresa"
+            android:name=".empresa.TelaCadastroEmpresa"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TelaEscolhaEmpresa"
+            android:name=".empresa.TelaEscolhaEmpresa"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TelaEscolhaUsuario"
+            android:name=".usuario.TelaEscolhaUsuario"
             android:screenOrientation="portrait" />
         <activity
             android:name=".TelaInicial"

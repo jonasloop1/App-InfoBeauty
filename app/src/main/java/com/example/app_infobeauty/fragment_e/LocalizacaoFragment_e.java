@@ -1,4 +1,4 @@
-package com.example.app_infobeauty;
+package com.example.app_infobeauty.fragment_e;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,12 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class AdicionarServicosFragment_e extends Fragment {
+import com.example.app_infobeauty.R;
+
+public class LocalizacaoFragment_e extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_adicionar_servicos_e, container, false);
+        return inflater.inflate(R.layout.fragment_localizacao_e, container, false);
     }
-
 }

@@ -1,10 +1,12 @@
-package com.example.app_infobeauty;
+package com.example.app_infobeauty.empresa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.app_infobeauty.R;
 
 public class TelaLoginEmpresa extends AppCompatActivity {
 

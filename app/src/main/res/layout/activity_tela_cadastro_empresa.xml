@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:background="#B5CCCB"
         android:orientation="vertical"
-        tools:context=".TelaCadastroEmpresa">
+        tools:context=".empresa.TelaCadastroEmpresa">
 
         <ImageView
             android:id="@+id/imageView8"
@@ -134,6 +134,7 @@
             android:layout_width="317dp"
             android:layout_height="49dp"
             android:layout_gravity="center"
+            android:onClick="alterarInserir"
             android:layout_marginBottom="20dp"
             android:text="Cadastrar"
             app:backgroundTint="#605A58" />

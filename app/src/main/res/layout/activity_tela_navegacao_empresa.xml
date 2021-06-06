@@ -7,7 +7,7 @@
     android:background="#B5CCCB"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:context=".TelaNavegacaoEmpresa"
+    tools:context=".empresa.TelaNavegacaoEmpresa"
     tools:openDrawer="start">
 
     <LinearLayout
@@ -27,7 +27,30 @@
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ListView
+                    android:id="@+id/lista"
+                    android:layout_width="312dp"
+                    android:layout_height="388dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.493"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.288"></ListView>
+
+            </LinearLayout>
+        </FrameLayout>
 
     </LinearLayout>
 

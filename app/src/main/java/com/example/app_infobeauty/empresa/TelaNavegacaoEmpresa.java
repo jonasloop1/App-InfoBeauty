@@ -1,4 +1,4 @@
-package com.example.app_infobeauty;
+package com.example.app_infobeauty.empresa;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -7,24 +7,48 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.graphics.drawable.GradientDrawable;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.app_infobeauty.R;
+import com.example.app_infobeauty.fragment_e.AdicionarServicosFragment_e;
+import com.example.app_infobeauty.fragment_e.AgendamentosFragment_e;
+import com.example.app_infobeauty.fragment_e.ConfiguracaoFragment_e;
+import com.example.app_infobeauty.fragment_e.LocalizacaoFragment_e;
+import com.example.app_infobeauty.fragment_e.MeuEstabelecimentoFragment_e;
+import com.example.app_infobeauty.fragment_e.MeusServicosFragment_e;
 import com.google.android.material.navigation.NavigationView;
 
 import java.io.Serializable;
-import java.text.MessageFormat;
+import java.util.Iterator;
+import java.util.List;
+import android.view.View;
+import android.widget.AdapterView;
+
 
 public class TelaNavegacaoEmpresa extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
-
+    ListView lista;
+    Intent intent;
+    public static final int ACTIVITY_REQUEST_EMPRESA = 1;
+    private EmpresaDAO dao ;
+    private String[] empresa;
+    private long[] idEmpresa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_navegacao_empresa);
+
+        lista = (ListView) findViewById(R.id.lista);
+        setTitle("Banco de Dados com SQLite!");
+        dao = new EmpresaDAO(this);
+        dao.open();
+        lista.setOnItemClickListener((AdapterView.OnItemClickListener) this); // Para o clique no item
 
         Toolbar toolbar = findViewById(R.id.toolbar);
 
@@ -37,6 +61,48 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
         drawer.addDrawerListener(toggle);
         toggle.syncState();
     }
+        @Override
+        protected void onResume () {
+            dao.open ();
+            super.onResume ();
+            List<com.example.app_infobeauty.empresa.Empresa> listaEmpresas = dao.getAll();
+            empresa = new String[listaEmpresas.size()];
+            idEmpresa = new long[listaEmpresas.size()];
+            int i =0;
+            Iterator<com.example.app_infobeauty.empresa.Empresa> iterator = listaEmpresas.iterator();
+            while (iterator.hasNext()) {
+                com.example.app_infobeauty.empresa.Empresa aux = new com.example.app_infobeauty.empresa.Empresa();
+                aux = (com.example.app_infobeauty.empresa.Empresa) iterator.next();
+                empresa[i] = aux.textoLista();  // relaciona os itens da lista
+                idEmpresa[i] = aux.getId();   // com o id do item na tabela
+                i++;
+            }
+            ArrayAdapter<String > adapter = new ArrayAdapter<String >( this ,  android.R.layout.simple_list_item_1 , empresa );
+            lista.setAdapter( adapter );
+        }
+        @Override
+        protected void onPause() {
+            dao.close();
+            super.onPause();
+        }
+        public void onItemClick(AdapterView<?> parent, View view, int position, long ident) {
+            long id = idEmpresa[position];
+            intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
+            intent.putExtra("acao", 0);// alteração ou exclusão
+            intent.putExtra("id", id);// passa o id do registro para busca e preenchimento da tela
+            startActivity(intent);
+        }
+        public void incluirDisciplina(View v) {
+            intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
+            intent.putExtra("acao", -1);
+            intent.putExtra("id", 0L);
+            startActivity(intent);
+        }
+        public void sair(View v) {
+            finish();
+        }
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

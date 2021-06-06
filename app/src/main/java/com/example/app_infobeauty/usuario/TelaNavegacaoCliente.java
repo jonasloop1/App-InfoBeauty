@@ -1,9 +1,15 @@
-package com.example.app_infobeauty;
+package com.example.app_infobeauty.usuario;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.app_infobeauty.R;
+import com.example.app_infobeauty.fragment_c.LocalizacaoFragment_c;
+import com.example.app_infobeauty.fragment_c.MeuPerfilFragment_c;
+import com.example.app_infobeauty.fragment_c.MeusAgendamentosFragment_c;
+import com.example.app_infobeauty.fragment_c.MeusFavoritos_c;
+import com.example.app_infobeauty.fragment_e.AdicionarServicosFragment_e;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;

@@ -7,7 +7,7 @@
     android:background="#B5CCCB"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:context=".TelaNavegacaoCliente"
+    tools:context=".usuario.TelaNavegacaoCliente"
     tools:openDrawer="start">
 
     <LinearLayout
