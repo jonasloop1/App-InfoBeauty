@@ -1,17 +1,10 @@
 package com.example.app_infobeauty.usuario;
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-
-import com.example.app_infobeauty.DbGateway;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class UsuarioDAO {
 
-    private final String TABLE_USUARIO = "Usuario";
+    /*private final String TABLE_USUARIO = "Usuario";
     private DbGateway gw;
 
     public UsuarioDAO(Context ctx){
@@ -24,7 +17,7 @@ public class UsuarioDAO {
         cv.put("Email", email);
         cv.put("Senha", senha);
         return gw.getDatabase().insert(TABLE_USUARIO, null, cv) > 0;
-    }
+    }*/
 
 
 

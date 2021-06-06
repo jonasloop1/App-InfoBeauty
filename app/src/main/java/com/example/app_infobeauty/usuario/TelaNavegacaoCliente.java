@@ -1,10 +1,18 @@
 package com.example.app_infobeauty.usuario;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.app_infobeauty.R;
+import com.example.app_infobeauty.empresa.Empresa;
+import com.example.app_infobeauty.empresa.EmpresaDAO;
+import com.example.app_infobeauty.empresa.ServicosEmpresas;
 import com.example.app_infobeauty.fragment_c.LocalizacaoFragment_c;
 import com.example.app_infobeauty.fragment_c.MeuPerfilFragment_c;
 import com.example.app_infobeauty.fragment_c.MeusAgendamentosFragment_c;
@@ -19,9 +27,16 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class TelaNavegacaoCliente extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.Iterator;
+import java.util.List;
+
+public class TelaNavegacaoCliente extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemClickListener {
 
     private DrawerLayout drawer;
+    ListView lista;
+    private EmpresaDAO dao;
+    private String[] empresas;
+    private  long[] idEmpresas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +44,10 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
         setContentView(R.layout.activity_tela_navegacao_cliente);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        lista = (ListView) findViewById(R.id.listView);
+        dao = new EmpresaDAO(this);
+        dao.open();
+        lista.setOnItemClickListener(this);
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -41,7 +60,42 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
     }
 
     @Override
+    protected void onResume(){
+        dao.open();
+        super.onResume();
+        List<Empresa> listaEmpresas = dao.getAll();
+        empresas = new String[listaEmpresas.size()];
+        idEmpresas = new long[listaEmpresas.size()];
+        int i = 0;
 
+        Iterator<Empresa> iterator = listaEmpresas.iterator();
+        while (iterator.hasNext()){
+            Empresa aux = new Empresa();
+            aux = (Empresa) iterator.next();
+            empresas[i] = aux.textoLista();
+            idEmpresas[i] = aux.getId();
+            i++;
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, empresas);
+        lista.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onPause(){
+        dao.close();
+        super.onPause();
+    }
+
+    public void onItemClick(AdapterView<?> parent, View view, int position, long ident){
+        long id = idEmpresas[position];
+        Intent intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
+        intent.putExtra("acao", 0);
+        intent.putExtra("id", id);
+        startActivity(intent);
+    }
+
+
+    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch ((item.getItemId())){
             case R.id.nav_perfil_c:

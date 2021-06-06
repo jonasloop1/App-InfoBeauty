@@ -25,16 +25,17 @@ public class EmpresaDAO {
             InfoBeautySQLiteOpenHelper.COLUNA_CONFIRMASENHA,
 
     };
+
     private InfoBeautySQLiteOpenHelper sqliteOpenHelper;
-    // construtor
+
     public EmpresaDAO(Context context) {
         sqliteOpenHelper = new InfoBeautySQLiteOpenHelper(context);
     }
-    // abrir conexão
+
     public void open() throws SQLException {
         database = sqliteOpenHelper.getWritableDatabase();
     }
-    // fechar conexão
+
     public void close() {
         sqliteOpenHelper.close();
     }
@@ -48,6 +49,7 @@ public class EmpresaDAO {
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_CONFIRMASENHA, confirmasenha);
         long insertId = database.insert(InfoBeautySQLiteOpenHelper.TABELA_EMPRESA, null, values);
     }
+
     // alteração
     public void alterar(long id, String nome, String email, String cnpj, String senha, String confirmasenha) {
         // prepara os dados para a atualização

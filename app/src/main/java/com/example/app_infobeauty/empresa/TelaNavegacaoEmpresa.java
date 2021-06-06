@@ -33,22 +33,11 @@ import android.widget.AdapterView;
 public class TelaNavegacaoEmpresa extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
-    ListView lista;
-    Intent intent;
-    public static final int ACTIVITY_REQUEST_EMPRESA = 1;
-    private EmpresaDAO dao ;
-    private String[] empresa;
-    private long[] idEmpresa;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_navegacao_empresa);
-
-        lista = (ListView) findViewById(R.id.lista);
-        setTitle("Banco de Dados com SQLite!");
-        dao = new EmpresaDAO(this);
-        dao.open();
-        lista.setOnItemClickListener((AdapterView.OnItemClickListener) this); // Para o clique no item
 
         Toolbar toolbar = findViewById(R.id.toolbar);
 
@@ -61,48 +50,6 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
         drawer.addDrawerListener(toggle);
         toggle.syncState();
     }
-        @Override
-        protected void onResume () {
-            dao.open ();
-            super.onResume ();
-            List<com.example.app_infobeauty.empresa.Empresa> listaEmpresas = dao.getAll();
-            empresa = new String[listaEmpresas.size()];
-            idEmpresa = new long[listaEmpresas.size()];
-            int i =0;
-            Iterator<com.example.app_infobeauty.empresa.Empresa> iterator = listaEmpresas.iterator();
-            while (iterator.hasNext()) {
-                com.example.app_infobeauty.empresa.Empresa aux = new com.example.app_infobeauty.empresa.Empresa();
-                aux = (com.example.app_infobeauty.empresa.Empresa) iterator.next();
-                empresa[i] = aux.textoLista();  // relaciona os itens da lista
-                idEmpresa[i] = aux.getId();   // com o id do item na tabela
-                i++;
-            }
-            ArrayAdapter<String > adapter = new ArrayAdapter<String >( this ,  android.R.layout.simple_list_item_1 , empresa );
-            lista.setAdapter( adapter );
-        }
-        @Override
-        protected void onPause() {
-            dao.close();
-            super.onPause();
-        }
-        public void onItemClick(AdapterView<?> parent, View view, int position, long ident) {
-            long id = idEmpresa[position];
-            intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
-            intent.putExtra("acao", 0);// alteração ou exclusão
-            intent.putExtra("id", id);// passa o id do registro para busca e preenchimento da tela
-            startActivity(intent);
-        }
-        public void incluirDisciplina(View v) {
-            intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
-            intent.putExtra("acao", -1);
-            intent.putExtra("id", 0L);
-            startActivity(intent);
-        }
-        public void sair(View v) {
-            finish();
-        }
-
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -150,82 +97,6 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
-        }
-    }
-
-    public static class Empresa implements Serializable {
-
-        private int id_E;
-        private String nome_E;
-        private String email_E;
-        private String cnpj_E;
-        private String senha_E;
-        private String confirmasenha_E;
-
-        public Empresa(int id_E, String nome_E, String email_E,String cnpj_E ,String senha_E, String confirmasenha_E){
-            this.id_E = id_E;
-            this.nome_E = nome_E;
-            this.email_E = email_E;
-            this.cnpj_E = cnpj_E;
-            this.senha_E = senha_E;
-            this.confirmasenha_E = confirmasenha_E;
-        }
-
-        public int getId_E(){ return this.id_E; }
-
-        public String getNome_E(){
-            return this.nome_E;
-        }
-
-        public void setNome_E(String nome_E) {
-            if (!nome_E.isEmpty()) {
-                this.nome_E = nome_E;
-            }
-        }
-
-        public String getEmail_E(){
-            return this.email_E;
-        }
-
-        public void setEmail_E(String email_E) {
-            if (!email_E.isEmpty()) {
-                this.email_E = email_E;
-            }
-        }
-
-        public String getCnpj_E(){
-            return this.cnpj_E;
-        }
-
-        public void setCnpj_E(String cnpj_E) {
-            if (!cnpj_E.isEmpty()) {
-                this.cnpj_E = cnpj_E;
-            }
-        }
-
-        public String getSenha_E(){
-            return this.senha_E;
-        }
-
-        public void setSenha_E(String senha_E) {
-            if (!senha_E.isEmpty()) {
-                this.senha_E = senha_E;
-            }
-        }
-
-        public String getConfirmasenha_E(){
-            return this.confirmasenha_E;
-        }
-
-        public void setConfirmasenha_E(String confirmasenha_E) {
-            if (!confirmasenha_E.isEmpty()) {
-                this.confirmasenha_E = confirmasenha_E;
-            }
-        }
-
-        @Override
-        public int hashCode(){
-            return this.id_E;
         }
     }
 }

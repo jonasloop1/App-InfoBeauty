@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.214" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/nomeFuncionario"
         android:layout_width="317dp"
         android:layout_height="63dp"
         android:layout_gravity="center"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.377" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/nomeServicos"
         android:layout_width="317dp"
         android:layout_height="63dp"
         android:layout_gravity="center"
@@ -93,7 +93,7 @@
         app:layout_constraintVertical_bias="0.54" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/horarioServicos"
         android:layout_width="317dp"
         android:layout_height="63dp"
         android:layout_gravity="center"
@@ -107,7 +107,7 @@
         app:layout_constraintVertical_bias="0.625" />
 
     <Button
-        android:id="@+id/cadastrarEmpresas"
+        android:id="@+id/buttonProximoTelaNavEmpresa"
         android:layout_width="317dp"
         android:layout_height="wrap_content"
         android:onClick="chamarTelaNavegacaoEmpresa"

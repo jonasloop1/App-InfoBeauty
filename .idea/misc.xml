@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Program Files/Android/Sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.18704710144927536" />
         <entry key="..\:/Users/201902579501/StudioProjects/App-InfoBeauty/app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.3078125" />
         <entry key="..\:/Users/201902579501/StudioProjects/App-InfoBeauty/app/src/main/res/drawable-v21/ic_menu_gallery.xml" value="0.3078125" />
         <entry key="..\:/Users/201902579501/StudioProjects/App-InfoBeauty/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" value="0.3078125" />
@@ -49,7 +50,7 @@
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/ic_location.xml" value="0.2203125" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/side_nav_bar.xml" value="0.2203125" />
-        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_servicos_empresas.xml" value="0.33" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_servicos_empresas.xml" value="0.22" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_splash_screen.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_empresa.xml" value="0.25" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_usuario.xml" value="0.1911231884057971" />
@@ -60,7 +61,7 @@
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_login_usuario.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_navegacao.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_navegacao_cliente.xml" value="0.25" />
-        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_navegacao_empresa.xml" value="0.22" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_navegacao_empresa.xml" value="0.1" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/app_bar_tela_navegacao.xml" value="0.1" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/app_bar_tela_navegacao_cliente.xml" value="0.1802536231884058" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/content_tela_navegacao.xml" value="0.17" />

@@ -14,6 +14,12 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
     public static final String COLUNA_SENHA = " senha ";
     public static final String COLUNA_CONFIRMASENHA = " confirmasenha ";
 
+    public static final String TABELA_SERVICOS = " Servicos ";
+    public static final String COLUNA_ID_SERVICOS = " id_servicos ";
+    public static final String COLUNA_NOME_FUNCIONARIO = " nome_funcionario ";
+    public static final String COLUNA_NOME_SERVICOS = " nome_servicos ";
+    public static final String COLUNA_HORARIO_SERVICOS = " horario_servicos ";
+
     // nomeia o banco de dados
     private static final String DATABASE_NAME = "infobeauty.db";
     // determina a versão do banco
@@ -28,19 +34,30 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
             + COLUNA_SENHA + " text not null , "
             + COLUNA_CONFIRMASENHA + " text not null ) ;";
 
+
+    private static final String CRIAR_BANCO_SERVICOS = " create table "
+            + TABELA_SERVICOS + "("
+            + COLUNA_ID_SERVICOS + " integer primary key autoincrement , "
+            + COLUNA_NOME_FUNCIONARIO + " text not null , "
+            + COLUNA_NOME_SERVICOS + " text not null , "
+            + COLUNA_HORARIO_SERVICOS + " text not null ) ;";
+
     // construtor
     public InfoBeautySQLiteOpenHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
     // criação do banco
     @Override
-    public void onCreate ( SQLiteDatabase database ) {
+    public void onCreate ( SQLiteDatabase database )
+    {
         database.execSQL ( CRIAR_BANCO );
+        database.execSQL ( CRIAR_BANCO_SERVICOS );
     }
     // atualização do banco
     @Override
     public void onUpgrade ( SQLiteDatabase db , int oldVersion , int newVersion ) {
         db.execSQL (" DROP TABLE IF EXISTS " + TABELA_EMPRESA );
+        db.execSQL (" DROP TABLE IF EXISTS " + TABELA_SERVICOS );
         onCreate (db);
     }
 }

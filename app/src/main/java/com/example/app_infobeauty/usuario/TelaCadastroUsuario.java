@@ -20,7 +20,7 @@ public class TelaCadastroUsuario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastro_usuario);
 
-        Button btnSalvar = (Button)findViewById(R.id.cadastrarUsuario);
+        /*Button btnSalvar = (Button)findViewById(R.id.cadastrarUsuario);
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,6 +123,6 @@ public class TelaCadastroUsuario extends AppCompatActivity {
         @Override
         public int hashCode(){
             return this.id;
-        }
+        }*/
     }
 }
