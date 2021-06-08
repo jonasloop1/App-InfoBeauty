@@ -7,12 +7,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
     // definição dos atributos
     public static final String TABELA_EMPRESA = " Empresa ";
-    public static final String COLUNA_ID = " id ";
-    public static final String COLUNA_NOME = " nome ";
-    public static final String COLUNA_EMAIL = " email ";
-    public static final String COLUNA_CNPJ = " cnpj ";
-    public static final String COLUNA_SENHA = " senha ";
-    public static final String COLUNA_CONFIRMASENHA = " confirmasenha ";
+    public static final String COLUNA_ID_EMPRESA = " id_empresa ";
+    public static final String COLUNA_NOME_EMPRESA = " nome_empresa ";
+    public static final String COLUNA_EMAIL_EMPRESA = " email_empresa ";
+    public static final String COLUNA_CNPJ_EMPRESA = " cnpj_empresa ";
+    public static final String COLUNA_SENHA_EMPRESA = " senha_empresa ";
+    public static final String COLUNA_CONFIRMASENHA_EMPRESA = " confirmasenha_empresa ";
 
     public static final String TABELA_SERVICOS = " Servicos ";
     public static final String COLUNA_ID_SERVICOS = " id_servicos ";
@@ -25,14 +25,14 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
     // determina a versão do banco
     private static final int DATABASE_VERSION = 1;
     // prepara a criação da tabela se não existir
-    private static final String CRIAR_BANCO = " create table "
+    private static final String CRIAR_BANCO_EMPRESA = " create table "
             + TABELA_EMPRESA + "("
-            + COLUNA_ID + " integer primary key autoincrement , "
-            + COLUNA_NOME + " text not null , "
-            + COLUNA_EMAIL + " text not null , "
-            + COLUNA_CNPJ + " text not null , "
-            + COLUNA_SENHA + " text not null , "
-            + COLUNA_CONFIRMASENHA + " text not null ) ;";
+            + COLUNA_ID_EMPRESA + " integer primary key autoincrement , "
+            + COLUNA_NOME_EMPRESA + " text not null , "
+            + COLUNA_EMAIL_EMPRESA + " text not null , "
+            + COLUNA_CNPJ_EMPRESA + " text not null , "
+            + COLUNA_SENHA_EMPRESA + " text not null , "
+            + COLUNA_CONFIRMASENHA_EMPRESA + " text not null ) ;";
 
 
     private static final String CRIAR_BANCO_SERVICOS = " create table "
@@ -50,7 +50,7 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate ( SQLiteDatabase database )
     {
-        database.execSQL ( CRIAR_BANCO );
+        database.execSQL ( CRIAR_BANCO_EMPRESA );
         database.execSQL ( CRIAR_BANCO_SERVICOS );
     }
     // atualização do banco

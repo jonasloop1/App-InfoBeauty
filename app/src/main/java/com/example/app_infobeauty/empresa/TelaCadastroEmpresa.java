@@ -29,20 +29,18 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
         confirmasenhaEmpresa = (EditText) findViewById(R.id.confirmasenhaEmpresa);
 
     }
-        public void Inserir (View v){
-            String nome, email, cnpj, senha, confirmasenha;
-            nome = nomeEmpresa.getText().toString();
-            email = emailEmpresa.getText().toString();
-            cnpj = cnpjEmpresa.getText().toString();
-            senha = senhaEmpresa.getText().toString();
-            confirmasenha = confirmasenhaEmpresa.getText().toString();
+        public void Inserir_empresa (View v){
+            String nome_empresa, email_empresa, cnpj_empresa, senha_empresa, confirmasenha_empresa;
+            nome_empresa = nomeEmpresa.getText().toString();
+            email_empresa = emailEmpresa.getText().toString();
+            cnpj_empresa = cnpjEmpresa.getText().toString();
+            senha_empresa = senhaEmpresa.getText().toString();
+            confirmasenha_empresa = confirmasenhaEmpresa.getText().toString();
             EmpresaDAO dao = new EmpresaDAO(this);
             dao.open();
-            dao.inserir(nome, email, cnpj, senha, confirmasenha);
-            //dao.close();
+            dao.inserir_empresa(nome_empresa, email_empresa, cnpj_empresa, senha_empresa, confirmasenha_empresa);
             Intent intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
             startActivity(intent);
-            //finish();
 
         }
     }

@@ -26,7 +26,7 @@ public class ServicosEmpresas extends AppCompatActivity {
         nomeServicos = (EditText) findViewById(R.id.nomeServicos);
         horarioServicos = (EditText) findViewById(R.id.horarioServicos);
         proxTelaNavEmpresa = (Button) findViewById(R.id.buttonProximoTelaNavEmpresa);
-        acao = getIntent().getExtras().getInt("acao");
+       /* acao = getIntent().getExtras().getInt("acao");
         id = getIntent().getExtras().getLong("id");
         if (acao == -1) {
             // inclusão
@@ -35,7 +35,7 @@ public class ServicosEmpresas extends AppCompatActivity {
             nomeServicos.setText("");
             horarioServicos.setText("");
 
-        }
+        }*/
     }
 
     public void Inserir_servicos(View v) {
@@ -45,15 +45,8 @@ public class ServicosEmpresas extends AppCompatActivity {
         horarioServicoss =horarioServicos.getText().toString();
         ServicosDAO dao = new ServicosDAO(this);
         dao.open();
-        if (acao == -1) {
-            dao.inserir_servicos(nomeFuncionarioo, nomeServicoss, horarioServicoss);
-            //dao.close();
-            //finish();
-        }
-    }
-
-    public void chamarTelaNavegacaoEmpresa(View v){
-    Intent intent = new Intent(this, TelaNavegacaoEmpresa.class);
-    startActivity(intent);
+        dao.inserir_servicos(nomeFuncionarioo, nomeServicoss, horarioServicoss);
+        Intent intent = new Intent(this, TelaNavegacaoEmpresa.class);
+        startActivity(intent);
     }
 }

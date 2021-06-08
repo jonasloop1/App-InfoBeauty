@@ -38,11 +38,11 @@
             android:id="@+id/nomeEmpresa"
             android:layout_width="317dp"
             android:layout_height="49dp"
+            android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_gravity="center"
-            />
+            android:hint="ex: Barbemax"
+            android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView15"
@@ -59,11 +59,11 @@
             android:id="@+id/emailEmpresa"
             android:layout_width="317dp"
             android:layout_height="49dp"
+            android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:layout_gravity="center"
-            />
+            android:hint="BarberMax13@gmail.com"
+            android:inputType="textEmailAddress" />
 
 
         <TextView
@@ -81,11 +81,11 @@
             android:id="@+id/cnpjEmpresa"
             android:layout_width="317dp"
             android:layout_height="49dp"
+            android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_gravity="center"
-            />
+            android:hint="05.537.340/0001-70"
+            android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView16"
@@ -102,11 +102,11 @@
             android:id="@+id/senhaEmpresa"
             android:layout_width="317dp"
             android:layout_height="49dp"
+            android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:inputType="textPassword"
-            android:layout_gravity="center"
-            />
+            android:hint="***************"
+            android:inputType="textPassword" />
 
         <TextView
             android:id="@+id/textView17"
@@ -123,11 +123,11 @@
             android:id="@+id/confirmasenhaEmpresa"
             android:layout_width="317dp"
             android:layout_height="49dp"
+            android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:inputType="textPassword"
-            android:layout_gravity="center"
-            />
+            android:hint="***************"
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/proximoEmpresaCadastro"
@@ -135,7 +135,7 @@
             android:layout_height="49dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:onClick="Inserir"
+            android:onClick="Inserir_empresa"
             android:text="Cadastrar"
             app:backgroundTint="#605A58" />
 
