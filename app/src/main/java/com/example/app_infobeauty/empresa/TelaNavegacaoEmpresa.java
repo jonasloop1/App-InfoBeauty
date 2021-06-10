@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.app_infobeauty.R;
+import com.example.app_infobeauty.TelaInicial;
 import com.example.app_infobeauty.fragment_e.AdicionarServicosFragment_e;
 import com.example.app_infobeauty.fragment_e.AgendamentosFragment_e;
 import com.example.app_infobeauty.fragment_e.ConfiguracaoFragment_e;
@@ -86,6 +87,8 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
             case R.id.nav_exit:
                 finish();
                 Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
+                Intent intentSair = new Intent(this, TelaInicial.class);
+                startActivity(intentSair);
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

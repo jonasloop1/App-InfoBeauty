@@ -9,80 +9,56 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
+        android:layout_width="236dp"
+        android:layout_height="53dp"
         android:ems="10"
         android:hint="Nome do estabelecimento"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252" />
-
-    <EditText
-        android:id="@+id/editTextNumberDecimal"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:hint="CNPJ"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
+        app:layout_constraintVertical_bias="0.171" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
+        android:layout_width="236dp"
+        android:layout_height="53dp"
         android:ems="10"
-        android:hint="Profissionais"
+        android:hint="Profissionais envolvidos"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.595" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintVertical_bias="0.249" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:background="#605A58"
-        android:text="Agendar"
+        android:text="CONFIRMAR AGENDAMENTO"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintVertical_bias="0.918" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="412dp"
-        android:layout_height="149dp"
+        android:layout_width="240dp"
+        android:layout_height="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@drawable/infobeauty_logo1" />
 
     <Button
@@ -90,23 +66,24 @@
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:background="#605A58"
-        android:text="VOLTAR"
+        android:text="CANCELAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintVertical_bias="0.918" />
 
     <Spinner
         android:id="@+id/spinnerServicos"
         android:layout_width="317dp"
         android:layout_height="49dp"
+        android:entries="@array/servicos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711" />
+        app:layout_constraintVertical_bias="0.659" />
 
     <Spinner
         android:id="@+id/spinnerHorarios"
@@ -117,5 +94,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.822" />
+        app:layout_constraintVertical_bias="0.763" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="157dp"
+        android:layout_height="141dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181"
+        app:srcCompat="@drawable/_13550629" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
