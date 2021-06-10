@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".DadosServicos"
+            android:exported="true" />
+        <activity
             android:name=".usuario.TelaNavegacaoCliente"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

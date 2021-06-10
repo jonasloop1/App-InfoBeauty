@@ -73,6 +73,8 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
             case R.id.nav_adicionar_servicos:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new AdicionarServicosFragment_e()).commit();
+                Intent intent = new Intent(this, ServicosEmpresas.class);
+                startActivity(intent);
                 break;
             case R.id.nav_configure:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

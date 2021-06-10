@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.app_infobeauty.DadosServicos;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
 import com.example.app_infobeauty.empresa.EmpresaDAO;
@@ -36,7 +37,7 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
 
     private DrawerLayout drawer;
     ListView lista;
-    private ServicosDAO dao;
+    private EmpresaDAO dao;
     private String[] servicos;
     private  long[] idServicos;
 
@@ -48,7 +49,7 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
         Toolbar toolbar = findViewById(R.id.toolbar);
 
         lista = (ListView) findViewById(R.id.listView);
-        dao = new ServicosDAO(this);
+        dao = new EmpresaDAO(this);
         dao.open();
         lista.setOnItemClickListener(this);
 
@@ -66,17 +67,17 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
     protected void onResume(){
         dao.open();
         super.onResume();
-        List<Servicos> listaServicos = dao.getAll();
+        List<Empresa> listaServicos = dao.getAll();
         servicos = new String[listaServicos.size()];
         idServicos = new long[listaServicos.size()];
         int i = 0;
 
-        Iterator<Servicos> iterator = listaServicos.iterator();
+        Iterator<Empresa> iterator = listaServicos.iterator();
         while (iterator.hasNext()){
-            Servicos aux = new Servicos();
-            aux = (Servicos) iterator.next();
+            Empresa aux = new Empresa();
+            aux = (Empresa) iterator.next();
             servicos[i] = aux.textoLista();
-            idServicos[i] = aux.getId_servicos();
+            idServicos[i] = aux.getId_empresa();
             i++;
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, servicos);
@@ -91,7 +92,7 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
 
     public void onItemClick(AdapterView<?> parent, View view, int position, long ident){
         long id = idServicos[position];
-        Intent intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
+        Intent intent = new Intent(getApplicationContext(), DadosServicos.class);
         intent.putExtra("acao", 0);
         intent.putExtra("id", id);
         startActivity(intent);

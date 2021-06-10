@@ -66,17 +66,16 @@ public class Empresa {
 
     // método construtor com definição dos valores padrão
     public Empresa() {
-        nome_empresa = "Nome Empresa";
-        email_empresa = "Email Empresa";
-        cnpj_empresa = "Cnpj Empresa";
+        nome_empresa = "";
+        email_empresa = "";
+        cnpj_empresa = "";
     }
 
     // método de formatação dos dados para exibição na lista
     public String textoLista() {
         String item;
-        item = getNome_empresa();
-        item = getEmail_empresa();
-        item = getCnpj_empresa();
+        item = "Nome do estabelecimento: "+getNome_empresa();
+        item += "\nEmail: " + getEmail_empresa();
         return item;
     }
 }
