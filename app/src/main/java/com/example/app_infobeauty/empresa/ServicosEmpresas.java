@@ -14,8 +14,8 @@ public class ServicosEmpresas extends AppCompatActivity {
 
     EditText nomeFuncionario, nomeServicos, horarioServicos;
     Button proxTelaNavEmpresa;
-    private int acao;
-    private long id;
+    //private int acao;
+    //private long id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

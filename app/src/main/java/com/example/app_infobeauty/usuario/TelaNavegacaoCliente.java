@@ -9,13 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.app_infobeauty.DadosServicos;
+import com.example.app_infobeauty.empresa.DadosServicos;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
 import com.example.app_infobeauty.empresa.EmpresaDAO;
-import com.example.app_infobeauty.empresa.Servicos;
-import com.example.app_infobeauty.empresa.ServicosDAO;
-import com.example.app_infobeauty.empresa.ServicosEmpresas;
 import com.example.app_infobeauty.fragment_c.LocalizacaoFragment_c;
 import com.example.app_infobeauty.fragment_c.MeuPerfilFragment_c;
 import com.example.app_infobeauty.fragment_c.MeusAgendamentosFragment_c;

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DadosServicos"
+            android:name=".empresa.DadosServicos"
             android:exported="true" />
         <activity
             android:name=".usuario.TelaNavegacaoCliente"

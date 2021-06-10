@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B5CCCB"
-    tools:context=".DadosServicos">
+    tools:context=".empresa.DadosServicos">
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -47,32 +47,6 @@
         app:layout_constraintVertical_bias="0.595" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:hint="Serviços"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="317dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:hint="Horários"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807" />
-
-    <EditText
         android:id="@+id/editTextTextEmailAddress2"
         android:layout_width="317dp"
         android:layout_height="49dp"
@@ -97,7 +71,7 @@
         app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        app:layout_constraintVertical_bias="0.954" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -122,5 +96,26 @@
         app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        app:layout_constraintVertical_bias="0.954" />
+
+    <Spinner
+        android:id="@+id/spinnerServicos"
+        android:layout_width="317dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.711" />
+
+    <Spinner
+        android:id="@+id/spinnerHorarios"
+        android:layout_width="317dp"
+        android:layout_height="49dp"
+        android:entries="@array/horarios"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.822" />
 </androidx.constraintlayout.widget.ConstraintLayout>

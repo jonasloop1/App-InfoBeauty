@@ -13,7 +13,19 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
-    <string-array name="list">
-        <item>ola</item>
+    <string-array name="servicos">
+        <item>Serviços disponíveis</item>
+        <item>Cortes de cabelo</item>
+        <item>Manicure</item>
+        <item>Depilação</item>
     </string-array>
+
+    <string-array name="horarios">
+        <item>Horários disponíveis</item>
+        <item>13:00 até 14:00</item>
+        <item>14:10 até 15:00</item>
+        <item>15:10 até 16:00</item>
+        <item>16:10 até 17:00</item>
+    </string-array>
+
 </resources>
