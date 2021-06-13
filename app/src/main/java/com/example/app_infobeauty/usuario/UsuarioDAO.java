@@ -21,11 +21,12 @@ public class UsuarioDAO {
             InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_USUARIO ,
             InfoBeautySQLiteOpenHelper.COLUNA_CPF_USUARIO ,
             InfoBeautySQLiteOpenHelper.COLUNA_SENHA_USUARIO,
-            InfoBeautySQLiteOpenHelper.COLUNA_CONFIRMASENHA_USUARIO,
 
     };
 
     private InfoBeautySQLiteOpenHelper sqliteOpenHelper;
+    private String email_usuario;
+    private String senha_usuario;
 
     public UsuarioDAO(Context context) {
         sqliteOpenHelper = new InfoBeautySQLiteOpenHelper(context);
@@ -39,25 +40,24 @@ public class UsuarioDAO {
         sqliteOpenHelper.close();
     }
     // inclusão
-    public void inserir_usuario(String nome_usuario, String email_usuario, String cpf_usuario, String senha_usuario, String confirmasenha_usuario) {
+    public void inserir_usuario(String nome_usuario, String email_usuario, String cpf_usuario, String senha_usuario) {
         ContentValues values = new ContentValues();
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_NOME_USUARIO, nome_usuario);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_USUARIO, email_usuario);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_CPF_USUARIO, cpf_usuario);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_SENHA_USUARIO, senha_usuario);
-        values.put(InfoBeautySQLiteOpenHelper.COLUNA_CONFIRMASENHA_USUARIO, confirmasenha_usuario);
         long insertId_usuario = database.insert(InfoBeautySQLiteOpenHelper.TABELA_USUARIO, null, values);
+
     }
 
     // alteração
-    public void alterar_usuario(long id, String nome_usuario, String email_usuario, String cpf_usuario, String senha_usuario, String confirmasenha_usuario) {
+    public void alterar_usuario(long id, String nome_usuario, String email_usuario, String cpf_usuario, String senha_usuario) {
         // prepara os dados para a atualização
         ContentValues values = new ContentValues();
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_NOME_USUARIO, nome_usuario);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_USUARIO, email_usuario);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_CPF_USUARIO, cpf_usuario);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_SENHA_USUARIO, senha_usuario);
-        values.put(InfoBeautySQLiteOpenHelper.COLUNA_CONFIRMASENHA_USUARIO, confirmasenha_usuario);
         database.update(InfoBeautySQLiteOpenHelper.TABELA_USUARIO, values, InfoBeautySQLiteOpenHelper.COLUNA_ID_USUARIO + "=" + id, null);
     }
     // exclusão
@@ -75,7 +75,6 @@ public class UsuarioDAO {
         usuario.setEmail_usuario(cursor.getString(2));
         usuario.setCpf_usuario(cursor.getString(3));
         usuario.setSenha_usuario(cursor.getString(4));
-        usuario.setConfirmasenha_usuario(cursor.getString(5));
         cursor.close();
         return usuario;
     }
@@ -92,7 +91,6 @@ public class UsuarioDAO {
             usuario.setEmail_usuario(cursor.getString(2));
             usuario.setCpf_usuario(cursor.getString(3));
             usuario.setSenha_usuario(cursor.getString(4));
-            usuario.setConfirmasenha_usuario(cursor.getString(5));
             usuarios.add(usuario);
             cursor.moveToNext();
         }
@@ -102,4 +100,17 @@ public class UsuarioDAO {
         return usuarios;
     }
 
-}
+        public Usuario ValidaLogin(String email_usuario, String senha_usuario) {
+            Cursor cursor = database.query(InfoBeautySQLiteOpenHelper.TABELA_USUARIO,
+                    columns, InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_USUARIO + " = " + email_usuario +
+                            InfoBeautySQLiteOpenHelper.COLUNA_SENHA_USUARIO + "=" + senha_usuario, null,null, null, null);
+            cursor.moveToFirst();
+            Usuario usuario = new Usuario();
+            usuario.setEmail_usuario(cursor.getString(0));
+            usuario.setSenha_usuario(cursor.getString(1));
+            cursor.close();
+            return usuario;
+        }
+
+
+    }

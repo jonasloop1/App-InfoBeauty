@@ -13,7 +13,6 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
     public static final String COLUNA_EMAIL_EMPRESA = " email_empresa ";
     public static final String COLUNA_CNPJ_EMPRESA = " cnpj_empresa ";
     public static final String COLUNA_SENHA_EMPRESA = " senha_empresa ";
-    public static final String COLUNA_CONFIRMASENHA_EMPRESA = " confirmasenha_empresa ";
 
     public static final String TABELA_USUARIO = " Usuario ";
     public static final String COLUNA_ID_USUARIO = " id_usuario ";
@@ -21,7 +20,6 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
     public static final String COLUNA_EMAIL_USUARIO = " email_usuario ";
     public static final String COLUNA_CPF_USUARIO = " cpf_usuario ";
     public static final String COLUNA_SENHA_USUARIO = " senha_usuario ";
-    public static final String COLUNA_CONFIRMASENHA_USUARIO = " confirmasenha_usuario ";
 
     public static final String TABELA_SERVICOS = " Servicos ";
     public static final String COLUNA_ID_SERVICOS = " id_servicos ";
@@ -42,8 +40,7 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
             + COLUNA_NOME_EMPRESA + " text not null , "
             + COLUNA_EMAIL_EMPRESA + " text not null , "
             + COLUNA_CNPJ_EMPRESA + " text not null , "
-            + COLUNA_SENHA_EMPRESA + " text not null , "
-            + COLUNA_CONFIRMASENHA_EMPRESA + " text not null ) ;";
+            + COLUNA_SENHA_EMPRESA + " text not null ) ;";
 
     private static final String CRIAR_BANCO_USUARIO = " create table "
             + TABELA_USUARIO + "("
@@ -51,8 +48,7 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
             + COLUNA_NOME_USUARIO + " text not null , "
             + COLUNA_EMAIL_USUARIO + " text not null , "
             + COLUNA_CPF_USUARIO + " text not null , "
-            + COLUNA_SENHA_USUARIO + " text not null , "
-            + COLUNA_CONFIRMASENHA_USUARIO + " text not null ) ;";
+            + COLUNA_SENHA_USUARIO + " text not null ) ;";
 
     private static final String CRIAR_BANCO_SERVICOS = " create table "
             + TABELA_SERVICOS + "("

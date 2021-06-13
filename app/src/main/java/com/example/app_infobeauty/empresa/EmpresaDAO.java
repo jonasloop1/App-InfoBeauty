@@ -22,7 +22,6 @@ public class EmpresaDAO {
             InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_EMPRESA ,
             InfoBeautySQLiteOpenHelper.COLUNA_CNPJ_EMPRESA ,
             InfoBeautySQLiteOpenHelper.COLUNA_SENHA_EMPRESA,
-            InfoBeautySQLiteOpenHelper.COLUNA_CONFIRMASENHA_EMPRESA,
 
     };
 
@@ -40,25 +39,23 @@ public class EmpresaDAO {
         sqliteOpenHelper.close();
     }
     // inclusão
-    public void inserir_empresa(String nome_empresa, String email_empresa, String cnpj_empresa, String senha_empresa, String confirmasenha_empresa) {
+    public void inserir_empresa( String nome_empresa, String email_empresa, String cnpj_empresa, String senha_empresa) {
         ContentValues values = new ContentValues();
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_NOME_EMPRESA, nome_empresa);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_EMPRESA, email_empresa);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_CNPJ_EMPRESA, cnpj_empresa);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_SENHA_EMPRESA, senha_empresa);
-        values.put(InfoBeautySQLiteOpenHelper.COLUNA_CONFIRMASENHA_EMPRESA, confirmasenha_empresa);
         long insertId_empresa = database.insert(InfoBeautySQLiteOpenHelper.TABELA_EMPRESA, null, values);
     }
 
     // alteração
-    public void alterar_empresa(long id, String nome, String email, String cnpj, String senha, String confirmasenha) {
+    public void alterar_empresa(long id, String nome, String email, String cnpj, String senha) {
         // prepara os dados para a atualização
         ContentValues values = new ContentValues();
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_NOME_EMPRESA, nome);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_EMPRESA, email);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_CNPJ_EMPRESA, cnpj);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_SENHA_EMPRESA, senha);
-        values.put(InfoBeautySQLiteOpenHelper.COLUNA_CONFIRMASENHA_EMPRESA, confirmasenha);
         database.update(InfoBeautySQLiteOpenHelper.TABELA_EMPRESA, values, InfoBeautySQLiteOpenHelper.COLUNA_ID_EMPRESA + "=" + id, null);
     }
     // exclusão
@@ -76,7 +73,6 @@ public class EmpresaDAO {
         empresa.setEmail_empresa(cursor.getString(2));
         empresa.setCnpj_empresa(cursor.getString(3));
         empresa.setSenha_empresa(cursor.getString(4));
-        empresa.setConfirmasenha_empresa(cursor.getString(5));
         cursor.close();
         return empresa;
     }
@@ -93,7 +89,6 @@ public class EmpresaDAO {
             empresa.setEmail_empresa(cursor.getString(2));
             empresa.setCnpj_empresa(cursor.getString(3));
             empresa.setSenha_empresa(cursor.getString(4));
-            empresa.setConfirmasenha_empresa(cursor.getString(5));
             empresas.add(empresa);
             cursor.moveToNext();
         }

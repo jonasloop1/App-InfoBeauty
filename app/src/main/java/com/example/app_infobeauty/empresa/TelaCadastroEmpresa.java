@@ -11,8 +11,13 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.app_infobeauty.MaskEditUtil;
 import com.example.app_infobeauty.R;
+import com.example.app_infobeauty.usuario.TelaCadastroUsuario;
+import com.example.app_infobeauty.usuario.TelaNavegacaoCliente;
+import com.example.app_infobeauty.usuario.UsuarioDAO;
 
 import java.util.regex.Pattern;
 
@@ -33,75 +38,42 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
         senhaEmpresa = (EditText) findViewById(R.id.senhaEmpresa);
         confirmasenhaEmpresa = (EditText) findViewById(R.id.confirmasenhaEmpresa);
 
-    }
-    private void validaCampos(){
+        cnpjEmpresa.addTextChangedListener(MaskEditUtil.mask(cnpjEmpresa, MaskEditUtil.FORMAT_CNPJ));
 
-        boolean res = false;
+        proximoEmpresaCadastro.setOnClickListener(new View.OnClickListener() {
 
-        String nome_E = nomeEmpresa.getText().toString();
-        String email_E = emailEmpresa.getText().toString();
-        String cnpj_E = cnpjEmpresa.getText().toString();
-        String senha_E = senhaEmpresa.getText().toString();
-        String confirmasenha_E = confirmasenhaEmpresa.getText().toString();
+            public void onClick(View v) {
 
-        if (res = isCampoVazio(nome_E)){
-            nomeEmpresa.requestFocus();
-        }
-        else
-            if (res = isEmailValido(email_E)){
-                emailEmpresa.requestFocus();
-            }
-            else
-                if (res = isCampoVazio(cnpj_E)){
-                cnpjEmpresa.requestFocus();
+                String nome_empresa, email_empresa, cnpj_empresa, senha_empresa,confirmasenha_empresa;
+                nome_empresa = nomeEmpresa.getText().toString();
+                email_empresa = emailEmpresa.getText().toString();
+                cnpj_empresa = cnpjEmpresa.getText().toString();
+                senha_empresa = senhaEmpresa.getText().toString();
+                confirmasenha_empresa = confirmasenhaEmpresa.getText().toString();
+
+                if (nome_empresa.equals("")){
+                    Toast.makeText(TelaCadastroEmpresa.this, "Preencha o Nome do Estabelecimento Por favor!", Toast.LENGTH_SHORT).show();
                 }
-                else
-                    if (res = isCampoVazio(senha_E)){
-                    senhaEmpresa.requestFocus();
-                    }
-                    else
-                        if (res = isCampoVazio(confirmasenha_E)){
-                        confirmasenhaEmpresa.requestFocus();
-                        }
-                        if (res){
+                else if (email_empresa.equals("")){
+                    Toast.makeText(TelaCadastroEmpresa.this, "Preencha o Email Por favor!", Toast.LENGTH_SHORT).show();
+                }
+                else if (cnpj_empresa.equals("")){
+                    Toast.makeText(TelaCadastroEmpresa.this, "Preencha o Cnpj Por favor!", Toast.LENGTH_SHORT).show();
+                }
+                else if (senha_empresa.equals("") || confirmasenha_empresa.equals("")){
+                    Toast.makeText(TelaCadastroEmpresa.this, "Por Favor Preencha a senha corretamente!", Toast.LENGTH_SHORT).show();
+                }
+                else if (!senha_empresa.equals(confirmasenha_empresa)){
+                    Toast.makeText(TelaCadastroEmpresa.this, "As senhas não correspondem!", Toast.LENGTH_SHORT).show();
+                }else {
 
-                            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-                            dlg.setTitle("Aviso");
-                            dlg.setMessage("Há campos inválidos ou em branco!");
-                            dlg.setNeutralButton("OK", null);
-                            dlg.show();
-                        }
-
-
-
+                    EmpresaDAO dao = new EmpresaDAO(TelaCadastroEmpresa.this);
+                    dao.open();
+                    dao.inserir_empresa(nome_empresa, email_empresa, cnpj_empresa, senha_empresa);
+                    Intent intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
-
-    private boolean isCampoVazio (String valor){
-
-        boolean resultado = (TextUtils.isEmpty(valor) || valor.trim().isEmpty() );
-        return resultado;
-    }
-
-    private boolean isEmailValido (String email_E){
-
-        boolean resultado = (isCampoVazio(email_E) && Patterns.EMAIL_ADDRESS.matcher(email_E).matches());
-        return resultado;
-    }
-
-
-        public void Inserir_empresa (View v){
-            validaCampos();
-            String nome_empresa, email_empresa, cnpj_empresa, senha_empresa, confirmasenha_empresa;
-            nome_empresa = nomeEmpresa.getText().toString();
-            email_empresa = emailEmpresa.getText().toString();
-            cnpj_empresa = cnpjEmpresa.getText().toString();
-            senha_empresa = senhaEmpresa.getText().toString();
-            confirmasenha_empresa = confirmasenhaEmpresa.getText().toString();
-            EmpresaDAO dao = new EmpresaDAO(this);
-            dao.open();
-            dao.inserir_empresa(nome_empresa, email_empresa, cnpj_empresa, senha_empresa, confirmasenha_empresa);
-            Intent intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
-            startActivity(intent);
-
-        }
-    }
+}

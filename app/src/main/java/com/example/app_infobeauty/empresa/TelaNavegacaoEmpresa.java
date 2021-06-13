@@ -85,10 +85,8 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
                 Toast.makeText(this, "Ajuda", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_exit:
-                finish();
+                System.exit(1);
                 Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
-                Intent intentSair = new Intent(this, TelaInicial.class);
-                startActivity(intentSair);
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

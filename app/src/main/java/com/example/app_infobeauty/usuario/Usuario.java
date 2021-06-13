@@ -3,7 +3,7 @@ package com.example.app_infobeauty.usuario;
 public class Usuario {
 
     private long id_usuario;
-    private String nome_usuario, email_usuario, cpf_usuario, senha_usuario, confirmasenha_usuario;
+    private String nome_usuario, email_usuario, cpf_usuario, senha_usuario;
 
 
     public long getId_usuario() {
@@ -54,15 +54,6 @@ public class Usuario {
         }
     }
 
-    public String getConfirmasenha_usuario() {
-        return confirmasenha_usuario;
-    }
-
-    public void setConfirmasenha_usuario(String confirmasenha_usuario) {
-        if (!confirmasenha_usuario.isEmpty()) {
-            this.confirmasenha_usuario = confirmasenha_usuario;
-        }
-    }
 
     // método construtor com definição dos valores padrão
     public Usuario() {

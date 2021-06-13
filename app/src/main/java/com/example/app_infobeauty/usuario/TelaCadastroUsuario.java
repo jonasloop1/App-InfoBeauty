@@ -10,11 +10,14 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.app_infobeauty.MaskEditUtil;
 import com.example.app_infobeauty.R;
 
 public class TelaCadastroUsuario extends AppCompatActivity {
 
-    EditText nomeUsuario, emailUsuario, cpfUsuario, senhaUsuario,confirmasenhaUsuario;
+    EditText nomeUsuario, emailUsuario, cpfUsuario, senhaUsuario, confirmasenhaUsuario;
     Button cadastroUsuario;
 
     @Override
@@ -29,77 +32,45 @@ public class TelaCadastroUsuario extends AppCompatActivity {
         senhaUsuario = (EditText) findViewById(R.id.senhaUsuario);
         confirmasenhaUsuario = (EditText) findViewById(R.id.confirmasenhaUsuario);
 
-    }
+        cpfUsuario.addTextChangedListener(MaskEditUtil.mask(cpfUsuario, MaskEditUtil.FORMAT_CPF));
 
-    private void validaCampos(){
-
-        boolean res = false;
-
-        String nome_U = nomeUsuario.getText().toString();
-        String email_U = emailUsuario.getText().toString();
-        String cpf_U = cpfUsuario.getText().toString();
-        String senha_U = senhaUsuario.getText().toString();
-        String confirmasenha_U = confirmasenhaUsuario.getText().toString();
-
-        if (res = isCampoVazio(nome_U)){
-            nomeUsuario.requestFocus();
-        }
-        else
-        if (res = isEmailValido(email_U)){
-            emailUsuario.requestFocus();
-        }
-        else
-        if (res = isCampoVazio(cpf_U)){
-            cpfUsuario.requestFocus();
-        }
-        else
-        if (res = isCampoVazio(senha_U)){
-            senhaUsuario.requestFocus();
-        }
-        else
-        if (res = isCampoVazio(confirmasenha_U)){
-            confirmasenhaUsuario.requestFocus();
-        }
-        if (res){
-
-            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setTitle("Aviso");
-            dlg.setMessage("Há campos inválidos ou em branco!");
-            dlg.setNeutralButton("OK", null);
-            dlg.show();
-        }
+        cadastroUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nome_usuario, email_usuario, cpf_usuario, senha_usuario, confirmasenha_usuario;
+                nome_usuario = nomeUsuario.getText().toString();
+                email_usuario = emailUsuario.getText().toString();
+                cpf_usuario = cpfUsuario.getText().toString();
+                senha_usuario = senhaUsuario.getText().toString();
+                confirmasenha_usuario = confirmasenhaUsuario.getText().toString();
 
 
+                if (nome_usuario.equals("")){
+                    Toast.makeText(TelaCadastroUsuario.this, "Preencha o Nome Por favor!", Toast.LENGTH_SHORT).show();
+                }
+                else if (email_usuario.equals("")){
+                    Toast.makeText(TelaCadastroUsuario.this, "Preencha o Email Por favor!", Toast.LENGTH_SHORT).show();
+                }
+                else if (cpf_usuario.equals("")){
+                    Toast.makeText(TelaCadastroUsuario.this, "Preencha o Cpf Por favor!", Toast.LENGTH_SHORT).show();
+                }
+                else if (senha_usuario.equals("") || confirmasenha_usuario.equals("")){
+                    Toast.makeText(TelaCadastroUsuario.this, "Por Favor Preencha a senha corretamente!", Toast.LENGTH_SHORT).show();
+                }
+                else if (!senha_usuario.equals(confirmasenha_usuario)){
+                    Toast.makeText(TelaCadastroUsuario.this, "As senhas não correspondem!", Toast.LENGTH_SHORT).show();
+                }else {
+
+                    UsuarioDAO dao = new UsuarioDAO(TelaCadastroUsuario.this);
+                    dao.open();
+                    dao.inserir_usuario(nome_usuario, email_usuario, cpf_usuario, senha_usuario);
+                    Intent intent = new Intent(getApplicationContext(), TelaNavegacaoCliente.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
     }
 
-    private boolean isCampoVazio (String valor){
-
-        boolean resultado = (TextUtils.isEmpty(valor) || valor.trim().isEmpty() );
-        return resultado;
-    }
-
-    private boolean isEmailValido (String email_U){
-
-        boolean resultado = (isCampoVazio(email_U) && Patterns.EMAIL_ADDRESS.matcher(email_U).matches());
-        return resultado;
-    }
-
-
-    public void Inserir_usuario (View v){
-        validaCampos();
-        String nome_usuario, email_usuario, cpf_usuario, senha_usuario, confirmasenha_usuario;
-        nome_usuario = nomeUsuario.getText().toString();
-        email_usuario = emailUsuario.getText().toString();
-        cpf_usuario = cpfUsuario.getText().toString();
-        senha_usuario = senhaUsuario.getText().toString();
-        confirmasenha_usuario = confirmasenhaUsuario.getText().toString();
-        UsuarioDAO dao = new UsuarioDAO(this);
-        dao.open();
-        dao.inserir_usuario(nome_usuario, email_usuario, cpf_usuario, senha_usuario, confirmasenha_usuario);
-        //Intent intent = new Intent(getApplicationContext(), TelaNavegacaoCliente.class);
-        //startActivity(intent);
-
-    }
 
 }

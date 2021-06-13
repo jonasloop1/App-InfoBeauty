@@ -54,16 +54,6 @@ public class Empresa {
         }
     }
 
-    public String getConfirmasenha_empresa() {
-        return confirmasenha_empresa;
-    }
-
-    public void setConfirmasenha_empresa(String confirmasenha_empresa) {
-        if (!confirmasenha_empresa.isEmpty()) {
-            this.confirmasenha_empresa = confirmasenha_empresa;
-        }
-    }
-
     // método construtor com definição dos valores padrão
     public Empresa() {
         nome_empresa = "";
