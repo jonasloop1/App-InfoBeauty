@@ -3,7 +3,7 @@ package com.example.app_infobeauty.empresa;
 public class Empresa {
 
     private long id_empresa;
-    private String nome_empresa, email_empresa, cnpj_empresa, senha_empresa, confirmasenha_empresa;
+    private String nome_empresa,endereco_empresa, email_empresa, cnpj_empresa, senha_empresa;
 
 
     public long getId_empresa() {
@@ -21,6 +21,16 @@ public class Empresa {
     public void setNome_empresa(String nome_empresa) {
         if (!nome_empresa.isEmpty()) {
             this.nome_empresa = nome_empresa;
+        }
+    }
+
+    public String getEndereco_empresa() {
+        return endereco_empresa;
+    }
+
+    public void setEndereco_empresa(String endereco_empresa) {
+        if (!endereco_empresa.isEmpty()) {
+            this.endereco_empresa = endereco_empresa;
         }
     }
 

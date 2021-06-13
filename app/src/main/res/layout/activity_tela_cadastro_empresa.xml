@@ -44,6 +44,27 @@
             android:hint="ex: Barbemax"
             android:inputType="textPersonName" />
 
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="49dp"
+            android:text="Endereço do estabelecimento:"
+            android:textColor="#605A58"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/enderecoEmpresa"
+            android:layout_width="317dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Endereço"
+            android:inputType="textPersonName" />
         <TextView
             android:id="@+id/textView15"
             android:layout_width="wrap_content"

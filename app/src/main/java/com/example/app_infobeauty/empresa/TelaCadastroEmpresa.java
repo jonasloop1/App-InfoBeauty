@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 
 public class TelaCadastroEmpresa extends AppCompatActivity {
 
-    EditText nomeEmpresa, emailEmpresa, cnpjEmpresa, senhaEmpresa,confirmasenhaEmpresa;
+    EditText nomeEmpresa, emailEmpresa,enderecoEmpresa, cnpjEmpresa, senhaEmpresa,confirmasenhaEmpresa;
     Button proximoEmpresaCadastro;
 
     @Override
@@ -33,6 +33,7 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
 
         proximoEmpresaCadastro = (Button) findViewById(R.id.proximoEmpresaCadastro);
         nomeEmpresa = (EditText) findViewById(R.id.nomeEmpresa);
+        enderecoEmpresa = (EditText) findViewById(R.id.enderecoEmpresa);
         emailEmpresa = (EditText) findViewById(R.id.emailEmpresa);
         cnpjEmpresa = (EditText) findViewById(R.id.cnpjEmpresa);
         senhaEmpresa = (EditText) findViewById(R.id.senhaEmpresa);
@@ -44,15 +45,19 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                String nome_empresa, email_empresa, cnpj_empresa, senha_empresa,confirmasenha_empresa;
+                String nome_empresa, email_empresa, cnpj_empresa, senha_empresa,confirmasenha_empresa,endereco_empresa;
                 nome_empresa = nomeEmpresa.getText().toString();
                 email_empresa = emailEmpresa.getText().toString();
+                endereco_empresa = enderecoEmpresa.getText().toString();
                 cnpj_empresa = cnpjEmpresa.getText().toString();
                 senha_empresa = senhaEmpresa.getText().toString();
                 confirmasenha_empresa = confirmasenhaEmpresa.getText().toString();
 
                 if (nome_empresa.equals("")){
                     Toast.makeText(TelaCadastroEmpresa.this, "Preencha o Nome do Estabelecimento Por favor!", Toast.LENGTH_SHORT).show();
+                }
+                else if (endereco_empresa.equals("")){
+                    Toast.makeText(TelaCadastroEmpresa.this, "Preencha o Endereço Por favor!", Toast.LENGTH_SHORT).show();
                 }
                 else if (email_empresa.equals("")){
                     Toast.makeText(TelaCadastroEmpresa.this, "Preencha o Email Por favor!", Toast.LENGTH_SHORT).show();
@@ -69,7 +74,7 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
 
                     EmpresaDAO dao = new EmpresaDAO(TelaCadastroEmpresa.this);
                     dao.open();
-                    dao.inserir_empresa(nome_empresa, email_empresa, cnpj_empresa, senha_empresa);
+                    dao.inserir_empresa(nome_empresa,endereco_empresa, email_empresa, cnpj_empresa, senha_empresa);
                     Intent intent = new Intent(getApplicationContext(), ServicosEmpresas.class);
                     startActivity(intent);
                 }

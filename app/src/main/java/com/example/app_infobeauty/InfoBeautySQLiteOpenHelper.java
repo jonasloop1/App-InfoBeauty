@@ -10,6 +10,7 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
     public static final String TABELA_EMPRESA = " Empresa ";
     public static final String COLUNA_ID_EMPRESA = " id_empresa ";
     public static final String COLUNA_NOME_EMPRESA = " nome_empresa ";
+    public static final String COLUNA_ENDERECO_EMPRESA = " endereco_empresa ";
     public static final String COLUNA_EMAIL_EMPRESA = " email_empresa ";
     public static final String COLUNA_CNPJ_EMPRESA = " cnpj_empresa ";
     public static final String COLUNA_SENHA_EMPRESA = " senha_empresa ";
@@ -38,6 +39,7 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
             + TABELA_EMPRESA + "("
             + COLUNA_ID_EMPRESA + " integer primary key autoincrement , "
             + COLUNA_NOME_EMPRESA + " text not null , "
+            + COLUNA_ENDERECO_EMPRESA + " text not null , "
             + COLUNA_EMAIL_EMPRESA + " text not null , "
             + COLUNA_CNPJ_EMPRESA + " text not null , "
             + COLUNA_SENHA_EMPRESA + " text not null ) ;";
@@ -78,4 +80,6 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
         db.execSQL (" DROP TABLE IF EXISTS " + TABELA_SERVICOS );
         onCreate (db);
     }
+
+
 }

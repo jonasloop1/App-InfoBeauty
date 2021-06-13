@@ -34,6 +34,7 @@ import android.widget.AdapterView;
 public class TelaNavegacaoEmpresa extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +86,8 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
                 Toast.makeText(this, "Ajuda", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_exit:
-                System.exit(1);
+                intent = new Intent(getApplicationContext(), TelaLoginEmpresa.class);
+                startActivity(intent);
                 Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
                 break;
         }

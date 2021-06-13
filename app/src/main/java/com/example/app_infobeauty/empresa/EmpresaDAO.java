@@ -19,6 +19,7 @@ public class EmpresaDAO {
     private String [] columns = {
             InfoBeautySQLiteOpenHelper.COLUNA_ID_EMPRESA ,
             InfoBeautySQLiteOpenHelper.COLUNA_NOME_EMPRESA ,
+            InfoBeautySQLiteOpenHelper.COLUNA_ENDERECO_EMPRESA ,
             InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_EMPRESA ,
             InfoBeautySQLiteOpenHelper.COLUNA_CNPJ_EMPRESA ,
             InfoBeautySQLiteOpenHelper.COLUNA_SENHA_EMPRESA,
@@ -39,9 +40,10 @@ public class EmpresaDAO {
         sqliteOpenHelper.close();
     }
     // inclusão
-    public void inserir_empresa( String nome_empresa, String email_empresa, String cnpj_empresa, String senha_empresa) {
+    public void inserir_empresa( String nome_empresa, String endereco_empresa,String email_empresa, String cnpj_empresa, String senha_empresa) {
         ContentValues values = new ContentValues();
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_NOME_EMPRESA, nome_empresa);
+        values.put(InfoBeautySQLiteOpenHelper.COLUNA_ENDERECO_EMPRESA, endereco_empresa);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_EMPRESA, email_empresa);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_CNPJ_EMPRESA, cnpj_empresa);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_SENHA_EMPRESA, senha_empresa);
@@ -49,10 +51,11 @@ public class EmpresaDAO {
     }
 
     // alteração
-    public void alterar_empresa(long id, String nome, String email, String cnpj, String senha) {
+    public void alterar_empresa(long id, String nome,String endereco_empresa ,String email, String cnpj, String senha) {
         // prepara os dados para a atualização
         ContentValues values = new ContentValues();
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_NOME_EMPRESA, nome);
+        values.put(InfoBeautySQLiteOpenHelper.COLUNA_ENDERECO_EMPRESA, endereco_empresa);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_EMPRESA, email);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_CNPJ_EMPRESA, cnpj);
         values.put(InfoBeautySQLiteOpenHelper.COLUNA_SENHA_EMPRESA, senha);
@@ -70,9 +73,10 @@ public class EmpresaDAO {
         Empresa empresa = new Empresa();
         empresa.setId_empresa(cursor.getLong(0));
         empresa.setNome_empresa(cursor.getString(1));
-        empresa.setEmail_empresa(cursor.getString(2));
-        empresa.setCnpj_empresa(cursor.getString(3));
-        empresa.setSenha_empresa(cursor.getString(4));
+        empresa.setEndereco_empresa(cursor.getString(2));
+        empresa.setEmail_empresa(cursor.getString(3));
+        empresa.setCnpj_empresa(cursor.getString(4));
+        empresa.setSenha_empresa(cursor.getString(5));
         cursor.close();
         return empresa;
     }
@@ -86,9 +90,10 @@ public class EmpresaDAO {
             Empresa empresa = new Empresa();
             empresa.setId_empresa(cursor.getLong(0));
             empresa.setNome_empresa(cursor.getString(1));
-            empresa.setEmail_empresa(cursor.getString(2));
-            empresa.setCnpj_empresa(cursor.getString(3));
-            empresa.setSenha_empresa(cursor.getString(4));
+            empresa.setEndereco_empresa(cursor.getString(2));
+            empresa.setEmail_empresa(cursor.getString(3));
+            empresa.setCnpj_empresa(cursor.getString(4));
+            empresa.setSenha_empresa(cursor.getString(5));
             empresas.add(empresa);
             cursor.moveToNext();
         }

@@ -14,6 +14,7 @@ public class UsuarioDAO {
 
     // banco
     private SQLiteDatabase database;
+    private SQLiteDatabase database1;
     //colunas da tabela
     private String [] columns = {
             InfoBeautySQLiteOpenHelper.COLUNA_ID_USUARIO ,
@@ -25,8 +26,6 @@ public class UsuarioDAO {
     };
 
     private InfoBeautySQLiteOpenHelper sqliteOpenHelper;
-    private String email_usuario;
-    private String senha_usuario;
 
     public UsuarioDAO(Context context) {
         sqliteOpenHelper = new InfoBeautySQLiteOpenHelper(context);
@@ -34,6 +33,8 @@ public class UsuarioDAO {
 
     public void open() throws SQLException {
         database = sqliteOpenHelper.getWritableDatabase();
+        database1 = sqliteOpenHelper.getReadableDatabase();
+
     }
 
     public void close() {
@@ -99,18 +100,26 @@ public class UsuarioDAO {
         // retorna a lista com as disciplinas
         return usuarios;
     }
-
+/*
         public Usuario ValidaLogin(String email_usuario, String senha_usuario) {
             Cursor cursor = database.query(InfoBeautySQLiteOpenHelper.TABELA_USUARIO,
-                    columns, InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_USUARIO + " = " + email_usuario +
-                            InfoBeautySQLiteOpenHelper.COLUNA_SENHA_USUARIO + "=" + senha_usuario, null,null, null, null);
+                    columns, InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_USUARIO + "=?" + email_usuario +
+                            InfoBeautySQLiteOpenHelper.COLUNA_SENHA_USUARIO + "=?" + senha_usuario, null,null, null, null);
             cursor.moveToFirst();
             Usuario usuario = new Usuario();
             usuario.setEmail_usuario(cursor.getString(0));
             usuario.setSenha_usuario(cursor.getString(1));
             cursor.close();
             return usuario;
+        }*/
+        public String ValidarLogin(String email_usuario, String senha_usuario){
+            Cursor cursor = database1.rawQuery("SELECT * FROM TABELA_USUARIO WHERE COLUNA_EMAIL_USUARIO=? AND COLUNA_SENHA_USUARIO=?", new String[]{email_usuario,senha_usuario});
+
+            if (cursor.getCount()>0){
+                return "OK";
+            }
+            return "ERRO";
+
         }
 
-
-    }
+}

@@ -13,6 +13,7 @@ import com.example.app_infobeauty.empresa.DadosServicos;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
 import com.example.app_infobeauty.empresa.EmpresaDAO;
+import com.example.app_infobeauty.empresa.TelaLoginEmpresa;
 import com.example.app_infobeauty.fragment_c.LocalizacaoFragment_c;
 import com.example.app_infobeauty.fragment_c.MeuPerfilFragment_c;
 import com.example.app_infobeauty.fragment_c.MeusAgendamentosFragment_c;
@@ -37,6 +38,7 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
     private EmpresaDAO dao;
     private String[] servicos;
     private  long[] idServicos;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,7 +126,8 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
                 Toast.makeText(this, "Ajuda", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_exit_c:
-                System.exit(1);
+                intent = new Intent(getApplicationContext(), TelaLoginUsuario.class);
+                startActivity(intent);
                 Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
                 break;
         }

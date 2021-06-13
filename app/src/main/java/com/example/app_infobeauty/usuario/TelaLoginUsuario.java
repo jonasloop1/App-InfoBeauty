@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.app_infobeauty.InfoBeautySQLiteOpenHelper;
 import com.example.app_infobeauty.R;
 
 
@@ -16,6 +17,7 @@ public class TelaLoginUsuario extends AppCompatActivity {
 
     EditText editTextEmailUsuario, editTextSenhaUsuario;
     Button btnLoginUsuario;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +42,12 @@ public class TelaLoginUsuario extends AppCompatActivity {
                 else if (senhaUsuario.equals("")){
                     Toast.makeText(TelaLoginUsuario.this, "Preencha a Senha Por favor!", Toast.LENGTH_SHORT).show();
                 }else {
-                    UsuarioDAO dao = new UsuarioDAO(TelaLoginUsuario.this);
-                    dao.open();
-                    dao.ValidaLogin(senhaUsuario, emailUsuario);
-                    Intent intent = new Intent(getApplicationContext(), TelaNavegacaoCliente.class);
-                    startActivity(intent);
+
+
+                    }
+
                 }
 
-            }
         });*/
 
     }
@@ -56,8 +56,7 @@ public class TelaLoginUsuario extends AppCompatActivity {
 
 
 
-
-    public void telaLoginUsuarioNavegacao(View view){
+        public void telaLoginUsuarioNavegacao(View view){
 
         Intent intent = new Intent(this, TelaNavegacaoCliente.class);
         startActivity(intent);
