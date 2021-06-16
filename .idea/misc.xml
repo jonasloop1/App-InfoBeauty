@@ -62,7 +62,7 @@
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/side_nav_bar.xml" value="0.2203125" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_agendamento_servicos.xml" value="0.2" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_dados_servicos.xml" value="0.22" />
-        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_servicos_empresas.xml" value="0.25" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_servicos_empresas.xml" value="0.22" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_splash_screen.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_empresa.xml" value="0.25" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_usuario.xml" value="0.25" />
@@ -81,6 +81,8 @@
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_adicionar_servicos_e.xml" value="0.2" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_agendamentos_e.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_ajuda.xml" value="0.16394927536231885" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_ajuda_c.xml" value="0.1693840579710145" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_ajuda_e.xml" value="0.1693840579710145" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_calendar.xml" value="0.18568840579710144" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_configuracao.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_configuracao_c.xml" value="0.17798913043478262" />

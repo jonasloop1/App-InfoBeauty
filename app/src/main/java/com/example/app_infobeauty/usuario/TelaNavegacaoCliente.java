@@ -13,6 +13,7 @@ import com.example.app_infobeauty.empresa.AgendamentoServicos;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
 import com.example.app_infobeauty.empresa.EmpresaDAO;
+import com.example.app_infobeauty.fragment_c.AjudaFragment_c;
 import com.example.app_infobeauty.fragment_c.LocalizacaoFragment_c;
 import com.example.app_infobeauty.fragment_c.MeuPerfilFragment_c;
 import com.example.app_infobeauty.fragment_c.MeusAgendamentosFragment_c;
@@ -122,7 +123,8 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
                 break;
 
             case R.id.nav_help_c:
-                Toast.makeText(this, "Ajuda", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new AjudaFragment_c()).commit();
                 break;
             case R.id.nav_exit_c:
                 intent = new Intent(getApplicationContext(), TelaLoginUsuario.class);

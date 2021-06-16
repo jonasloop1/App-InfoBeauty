@@ -18,24 +18,26 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.908"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toEndOf="@+id/buttonMaisInfon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintVertical_bias="0.007" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="236dp"
         android:layout_height="53dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
         android:hint="Profissionais envolvidos"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.728"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonMaisInfon"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintVertical_bias="0.012" />
 
     <Button
         android:id="@+id/buttonConfirmAgenda"
@@ -135,15 +137,16 @@
         app:layout_constraintVertical_bias="0.835" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="110sp"
+        android:id="@+id/buttonMaisInfon"
+        android:layout_width="110dp"
         android:layout_height="100dp"
+        android:onClick="maaisInfo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.009"
+        app:layout_constraintVertical_bias="0.007"
         app:srcCompat="@drawable/infobeauty_logo2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

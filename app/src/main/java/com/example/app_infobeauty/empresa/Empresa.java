@@ -75,7 +75,7 @@ public class Empresa {
     public String textoLista() {
         String item;
         item = "Nome do estabelecimento: "+getNome_empresa();
-        item += "\nEmail: " + getEmail_empresa();
+        item += "\nEndereço: " +getEndereco_empresa();
         return item;
     }
 }

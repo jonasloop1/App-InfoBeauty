@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ public class AgendamentoServicos extends AppCompatActivity {
 
     Spinner spServicos, spHorarios;
     Button confirmarAgenda;
+    ImageView buttonMaisInformacoes;
     private AlertDialog alertaDeAgendamento;
 
     @Override
@@ -27,6 +29,7 @@ public class AgendamentoServicos extends AppCompatActivity {
         setContentView(R.layout.activity_agendamento_servicos);
 
         confirmarAgenda = (Button) findViewById(R.id.buttonConfirmAgenda);
+        buttonMaisInformacoes = (ImageView) findViewById(R.id.buttonMaisInfon);
         spServicos = (Spinner) findViewById(R.id.spinnerServicos);
         //spHorarios = (Spinner) findViewById(R.id.spinnerHorarios);
 
@@ -68,6 +71,25 @@ public class AgendamentoServicos extends AppCompatActivity {
         alertaDeAgendamento = builder.create();
         alertaDeAgendamento.show();
     }
+
+    public void maaisInfo(View v){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Informações do estabelecimento!");
+        builder.setMessage("Endereço:" +
+                "\nFuncionário:" +
+                "\nE-mail:");
+
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                Toast.makeText(AgendamentoServicos.this, "✓", Toast.LENGTH_SHORT).show();
+            }
+        });
+        alertaDeAgendamento = builder.create();
+        alertaDeAgendamento.show();
+    }
+
 
     public void bt1(View v){
         Toast.makeText(AgendamentoServicos.this, "11:00 da manhã!", Toast.LENGTH_SHORT).show();
