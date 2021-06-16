@@ -9,11 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.app_infobeauty.empresa.DadosServicos;
+import com.example.app_infobeauty.empresa.AgendamentoServicos;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
 import com.example.app_infobeauty.empresa.EmpresaDAO;
-import com.example.app_infobeauty.empresa.TelaLoginEmpresa;
 import com.example.app_infobeauty.fragment_c.LocalizacaoFragment_c;
 import com.example.app_infobeauty.fragment_c.MeuPerfilFragment_c;
 import com.example.app_infobeauty.fragment_c.MeusAgendamentosFragment_c;
@@ -91,7 +90,7 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
 
     public void onItemClick(AdapterView<?> parent, View view, int position, long ident){
         long id = idServicos[position];
-        Intent intent = new Intent(getApplicationContext(), DadosServicos.class);
+        Intent intent = new Intent(getApplicationContext(), AgendamentoServicos.class);
         intent.putExtra("acao", 0);
         intent.putExtra("id", id);
         startActivity(intent);

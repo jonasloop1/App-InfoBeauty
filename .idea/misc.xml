@@ -54,16 +54,18 @@
         <entry key="..\:/Users/201902586549/AndroidStudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_servicos_empresas.xml" value="0.22" />
         <entry key="..\:/Users/201902586549/AndroidStudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_empresa.xml" value="0.25" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/button_style.xml" value="0.2203125" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.2203125" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.2203125" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/ic_location.xml" value="0.2203125" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/drawable/side_nav_bar.xml" value="0.2203125" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_agendamento_servicos.xml" value="0.2" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_dados_servicos.xml" value="0.22" />
-        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_servicos_empresas.xml" value="0.22" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_servicos_empresas.xml" value="0.25" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_splash_screen.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_empresa.xml" value="0.25" />
-        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_usuario.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_cadastro_usuario.xml" value="0.25" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_escolha_empresa.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_escolha_usuario.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/activity_tela_inicial.xml" value="0.1911231884057971" />
@@ -99,8 +101,8 @@
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_nav_minha_agenda.xml" value="0.1" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/fragment_profile.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/nav_header.xml" value="0.20380434782608695" />
-        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/nav_header_c.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/nav_header_e.xml" value="0.16394927536231885" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/nav_header_c.xml" value="0.25" />
+        <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/nav_header_e.xml" value="0.22" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/layout/nav_header_tela_navegacao.xml" value="0.18568840579710144" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="..\:/Users/201902586549/StudioProjects/App-InfoBeauty/app/src/main/res/menu/drawer_menu.xml" value="0.33" />
@@ -110,7 +112,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
