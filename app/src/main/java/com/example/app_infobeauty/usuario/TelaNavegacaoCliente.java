@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.app_infobeauty.empresa.AgendamentoServicos;
+import com.example.app_infobeauty.agendamento.AgendamentoServicos;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
 import com.example.app_infobeauty.empresa.EmpresaDAO;

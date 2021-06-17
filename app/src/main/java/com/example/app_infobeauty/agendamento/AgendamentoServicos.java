@@ -1,4 +1,4 @@
-package com.example.app_infobeauty.empresa;
+package com.example.app_infobeauty.agendamento;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B5CCCB"
-    tools:context=".empresa.AgendamentoServicos"
+    tools:context=".agendamento.AgendamentoServicos"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="32dp">
 
@@ -21,23 +21,7 @@
         app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toEndOf="@+id/buttonMaisInfon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="236dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:hint="Profissionais envolvidos"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonMaisInfon"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.012" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <Button
         android:id="@+id/buttonConfirmAgenda"
@@ -59,12 +43,14 @@
         android:id="@+id/spinnerServicos"
         android:layout_width="254dp"
         android:layout_height="51dp"
+        android:layout_marginBottom="44dp"
         android:entries="@array/servicos"
         app:layout_constraintBottom_toTopOf="@+id/calendarView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.681"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/bt1"
@@ -75,7 +61,7 @@
         android:text="11:00"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.827" />

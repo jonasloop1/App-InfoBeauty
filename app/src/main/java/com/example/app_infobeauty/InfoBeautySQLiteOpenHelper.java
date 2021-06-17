@@ -28,7 +28,11 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
     public static final String COLUNA_NOME_SERVICOS = " nome_servicos ";
     public static final String COLUNA_HORARIO_SERVICOS = " horario_servicos ";
 
-
+    public static final String TABELA_AGENDAMENTO = " Agendamento ";
+    public static final String COLUNA_ID_AGENDAMENTO = " id_agendamento ";
+    public static final String COLUNA_SERVICOS_SPINNER = " servicos_spinner ";
+    public static final String COLUNA_DATA_CALENDARIO = " data_calendario ";
+    public static final String COLUNA_HORARIO_AGENDAMENTO = " horario_agendamento ";
 
     // nomeia o banco de dados
     private static final String DATABASE_NAME = "infobeauty.db";
@@ -59,6 +63,14 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
             + COLUNA_NOME_SERVICOS + " text not null , "
             + COLUNA_HORARIO_SERVICOS + " text not null ) ;";
 
+    private static final String CRIAR_BANCO_AGENDAMENTOS = " create table "
+            + TABELA_AGENDAMENTO + "("
+            + COLUNA_ID_AGENDAMENTO + " integer primary key autoincrement , "
+            + COLUNA_SERVICOS_SPINNER + " text not null , "
+            + COLUNA_DATA_CALENDARIO + " text not null , "
+            + COLUNA_HORARIO_AGENDAMENTO + " text not null ) ;";
+
+
     // construtor
     public InfoBeautySQLiteOpenHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -70,6 +82,7 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
         database.execSQL ( CRIAR_BANCO_EMPRESA );
         database.execSQL ( CRIAR_BANCO_USUARIO );
         database.execSQL ( CRIAR_BANCO_SERVICOS );
+        database.execSQL(CRIAR_BANCO_AGENDAMENTOS);
 
     }
     // atualização do banco
@@ -78,8 +91,7 @@ public class InfoBeautySQLiteOpenHelper extends SQLiteOpenHelper{
         db.execSQL (" DROP TABLE IF EXISTS " + TABELA_EMPRESA );
         db.execSQL (" DROP TABLE IF EXISTS " + TABELA_USUARIO );
         db.execSQL (" DROP TABLE IF EXISTS " + TABELA_SERVICOS );
+        db.execSQL (" DROP TABLE IF EXISTS " + TABELA_AGENDAMENTO);
         onCreate (db);
     }
-
-
 }
