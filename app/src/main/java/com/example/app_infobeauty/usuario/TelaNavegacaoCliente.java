@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.app_infobeauty.TelaInicial;
 import com.example.app_infobeauty.agendamento.AgendamentoServicos;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
@@ -127,7 +128,7 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
                         new AjudaFragment_c()).commit();
                 break;
             case R.id.nav_exit_c:
-                intent = new Intent(getApplicationContext(), TelaLoginUsuario.class);
+                intent = new Intent(getApplicationContext(), TelaInicial.class);
                 startActivity(intent);
                 Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
                 break;

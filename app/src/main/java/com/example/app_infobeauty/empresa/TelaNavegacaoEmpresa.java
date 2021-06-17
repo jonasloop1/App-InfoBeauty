@@ -86,7 +86,7 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
                 Toast.makeText(this, "Ajuda", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_exit:
-                intent = new Intent(getApplicationContext(), TelaLoginEmpresa.class);
+                intent = new Intent(getApplicationContext(), TelaInicial.class);
                 startActivity(intent);
                 Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
                 break;
