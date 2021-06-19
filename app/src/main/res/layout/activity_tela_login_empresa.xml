@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/infobeauty_logo1" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/edtEmailEmpresaLogin"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.567" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edtSenhaEmpresaLogin"
         android:layout_width="317dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -88,7 +88,7 @@
         android:id="@+id/button7"
         android:layout_width="317dp"
         android:layout_height="49dp"
-        android:onClick="telaLoginEmpresaNavegacao"
+        android:onClick="login_empresa"
         android:text="Entrar"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"

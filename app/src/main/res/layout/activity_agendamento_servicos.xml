@@ -21,7 +21,7 @@
         app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toEndOf="@+id/buttonMaisInfon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <Button
         android:id="@+id/buttonConfirmAgenda"
@@ -42,20 +42,18 @@
         android:id="@+id/spinnerServicos"
         android:layout_width="254dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="44dp"
         android:entries="@array/servicos"
         app:layout_constraintBottom_toTopOf="@+id/calendario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintHorizontal_bias="0.738"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.527" />
 
     <CalendarView
         android:id="@+id/calendario"
         android:layout_width="341dp"
         android:layout_height="305dp"
-        android:layout_marginTop="184dp"
         android:background="#B5CCCB"
         android:dateTextAppearance="@style/TextAppearance.AppCompat.Medium"
         android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -64,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.28" />
+        app:layout_constraintVertical_bias="0.838" />
 
     <ImageView
         android:id="@+id/buttonMaisInfon"

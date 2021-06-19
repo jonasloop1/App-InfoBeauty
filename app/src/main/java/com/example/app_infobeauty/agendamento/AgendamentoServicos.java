@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.TelaNavegacaoEmpresa;
+import com.example.app_infobeauty.usuario.TelaNavegacaoCliente;
 
 import java.util.ArrayList;
 
@@ -115,7 +116,7 @@ public class AgendamentoServicos extends AppCompatActivity {
         alertaDeAgendamento = builder.create();
         alertaDeAgendamento.show();
 
-        Intent intent = new Intent(AgendamentoServicos.this, TelaNavegacaoEmpresa.class);
+        Intent intent = new Intent(AgendamentoServicos.this, TelaNavegacaoCliente.class);
         //intent.putExtra("nomeServicoAgendado", nomeServicoAgendado);
         startActivity(intent);
     }

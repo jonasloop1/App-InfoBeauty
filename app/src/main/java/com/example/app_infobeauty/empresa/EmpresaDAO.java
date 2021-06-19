@@ -7,6 +7,7 @@ import android.content.Context ;
 import android.database.Cursor ;
 import android.database.SQLException ;
 import android.database.sqlite.SQLiteDatabase ;
+import android.widget.Toast;
 
 import com.example.app_infobeauty.InfoBeautySQLiteOpenHelper;
 
@@ -64,6 +65,15 @@ public class EmpresaDAO {
     // exclusão
     public void apagar_empresa(long id) {
         database.delete(InfoBeautySQLiteOpenHelper.TABELA_EMPRESA, InfoBeautySQLiteOpenHelper.COLUNA_ID_EMPRESA + "=" + id, null);
+    }
+    //autenticação login
+    public String login_empresa(String email_empresa, String senha_empresa){
+        database = sqliteOpenHelper.getReadableDatabase();
+        Cursor cursor = database.rawQuery("SELECT * FROM Empresa WHERE email_empresa=? AND senha_empresa=?", new String[]{email_empresa, senha_empresa});
+        if(cursor.getCount()>0){
+            return "OK";
+        }
+        return "ERRO";
     }
     //busca
     public Empresa buscar_empresa(long id) {

@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -34,7 +35,6 @@ import android.widget.AdapterView;
 public class TelaNavegacaoEmpresa extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
-    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,7 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
         Toolbar toolbar = findViewById(R.id.toolbar);
 
         drawer = findViewById(R.id.drawer_layout);
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
