@@ -65,6 +65,15 @@ public class UsuarioDAO {
     public void apagar_usuario(long id) {
         database.delete(InfoBeautySQLiteOpenHelper.TABELA_USUARIO, InfoBeautySQLiteOpenHelper.COLUNA_ID_USUARIO + "=" + id, null);
     }
+
+    public String login_usuario(String email_usuario, String senha_usuario){
+        database = sqliteOpenHelper.getReadableDatabase();
+        Cursor cursor = database.rawQuery("SELECT * FROM Usuario WHERE email_usuario=? AND senha_usuario=?", new String[]{email_usuario, senha_usuario});
+        if(cursor.getCount()>0){
+            return "OK";
+        }
+        return "ERRO";
+    }
     //busca
     public Usuario buscar_usuario(long id) {
         Cursor cursor = database.query(InfoBeautySQLiteOpenHelper.TABELA_USUARIO,

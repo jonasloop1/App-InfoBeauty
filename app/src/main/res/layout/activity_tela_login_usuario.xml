@@ -90,7 +90,7 @@
         android:id="@+id/btnLoginUsuario"
         android:layout_width="317dp"
         android:layout_height="49dp"
-        android:onClick="telaLoginUsuarioNavegacao"
+        android:onClick="login_usuario"
         android:text="Entrar"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"
