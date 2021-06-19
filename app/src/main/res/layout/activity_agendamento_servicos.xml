@@ -35,8 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt2"
-        app:layout_constraintVertical_bias="0.589"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Spinner
@@ -45,82 +44,27 @@
         android:layout_height="51dp"
         android:layout_marginBottom="44dp"
         android:entries="@array/servicos"
-        app:layout_constraintBottom_toTopOf="@+id/calendarView"
+        app:layout_constraintBottom_toTopOf="@+id/calendario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.681"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/bt1"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_style"
-        android:onClick="bt1"
-        android:text="11:00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
-
-    <Button
-        android:id="@+id/bt2"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_style"
-        android:onClick="bt2"
-        android:text="13:00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toEndOf="@+id/bt1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
-
-    <Button
-        android:id="@+id/bt3"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_style"
-        android:onClick="bt3"
-        android:text="15:00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toEndOf="@+id/bt2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
-
-    <Button
-        android:id="@+id/bt4"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_style"
-        android:onClick="bt4"
-        android:text="17:00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
-        app:layout_constraintStart_toEndOf="@+id/bt3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
-
     <CalendarView
-        android:id="@+id/calendarView"
+        android:id="@+id/calendario"
         android:layout_width="341dp"
         android:layout_height="305dp"
+        android:layout_marginTop="184dp"
         android:background="#B5CCCB"
         android:dateTextAppearance="@style/TextAppearance.AppCompat.Medium"
         android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toTopOf="@+id/bt1"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintCircleRadius="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835" />
+        app:layout_constraintVertical_bias="0.28" />
 
     <ImageView
         android:id="@+id/buttonMaisInfon"
@@ -134,5 +78,47 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.007"
         app:srcCompat="@drawable/infobeauty_logo2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="391dp"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.792">
+
+        <RadioButton
+            android:id="@+id/rbHora1"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="10:00"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rbHora2"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="14:30"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rbHora3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="15:50"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rbHora4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="17:00" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

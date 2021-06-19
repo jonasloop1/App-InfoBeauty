@@ -7,6 +7,7 @@
     android:background="#B5CCCB"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
+    tools:openDrawer="start"
     tools:context=".empresa.TelaNavegacaoEmpresa">
 
     <LinearLayout
@@ -64,8 +65,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.395"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton"
+                    app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/barber" />
 
                 <ImageButton
@@ -74,10 +75,10 @@
                     android:layout_height="180dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.004"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.395"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+                    app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/calendar" />
 
                 <TextView
@@ -86,12 +87,12 @@
                     android:layout_height="wrap_content"
                     android:text="Meu Estabelecimento"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.135"
+                    app:layout_constraintHorizontal_bias="0.139"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/imageButton2"
-                    app:layout_constraintVertical_bias="0.208" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.896" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -99,11 +100,12 @@
                     android:layout_height="wrap_content"
                     android:text="Meus Serviços"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.829"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton"
+                    app:layout_constraintVertical_bias="0.894" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -111,11 +113,12 @@
                     android:layout_height="wrap_content"
                     android:text="Minha Agenda"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.181"
+                    app:layout_constraintHorizontal_bias="0.188"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+                    app:layout_constraintVertical_bias="0.894" />
 
                 <TextView
                     android:id="@+id/textView24"
@@ -123,12 +126,24 @@
                     android:layout_height="wrap_content"
                     android:text="Adicionar Serviços"
                     android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.841"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton"
+                    app:layout_constraintVertical_bias="0.888" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="304dp"
+                    android:layout_height="144dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.862"
+                    app:layout_constraintHorizontal_bias="0.495"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.211" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+                    app:layout_constraintVertical_bias="0.449"
+                    app:srcCompat="@drawable/infobeauty_logo1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </FrameLayout>
 

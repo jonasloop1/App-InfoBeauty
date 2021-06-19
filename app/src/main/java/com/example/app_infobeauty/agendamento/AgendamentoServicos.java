@@ -4,23 +4,30 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.app_infobeauty.R;
+import com.example.app_infobeauty.empresa.TelaNavegacaoEmpresa;
 
 import java.util.ArrayList;
 
 public class AgendamentoServicos extends AppCompatActivity {
 
     Spinner spServicos, spHorarios;
-    Button confirmarAgenda;
+    RadioButton rbHora1, rbHora2, rbHora3, rbHora4;
+    Button confirmarAgenda, bt1_h, bt2_h, bt3_h, bt4_h;
     ImageView buttonMaisInformacoes;
+    CalendarView canlendarioData;
     private AlertDialog alertaDeAgendamento;
 
     @Override
@@ -30,7 +37,17 @@ public class AgendamentoServicos extends AppCompatActivity {
 
         confirmarAgenda = (Button) findViewById(R.id.buttonConfirmAgenda);
         buttonMaisInformacoes = (ImageView) findViewById(R.id.buttonMaisInfon);
+        rbHora1 = (RadioButton) findViewById(R.id.rbHora1);
+        rbHora2 = (RadioButton) findViewById(R.id.rbHora2);
+        rbHora3 = (RadioButton) findViewById(R.id.rbHora3);
+        rbHora4 = (RadioButton) findViewById(R.id.rbHora4);
+
+       /* bt1_h = (Button) findViewById(R.id.bt1);
+        bt2_h = (Button) findViewById(R.id.bt2);
+        bt3_h = (Button) findViewById(R.id.bt3);
+        bt4_h = (Button) findViewById(R.id.bt4);*/
         spServicos = (Spinner) findViewById(R.id.spinnerServicos);
+        canlendarioData = (CalendarView) findViewById(R.id.calendario);
         //spHorarios = (Spinner) findViewById(R.id.spinnerHorarios);
 
         ArrayList<String> listServ = new ArrayList<>();
@@ -56,6 +73,33 @@ public class AgendamentoServicos extends AppCompatActivity {
     }
 
     public void alertaDeAgendamento(View v){
+        String nomeServicoAgendado, dataServicoAgendado, horaServicoAgendado;
+
+        if (spServicos.getSelectedItem().toString().trim().equals("Cortes de cabelos 20$")) {
+            nomeServicoAgendado = spServicos.getSelectedItem().toString();
+        }else if(spServicos.getSelectedItem().toString().trim().equals("Depilação 30$")){
+            nomeServicoAgendado = spServicos.getSelectedItem().toString();
+        }else{
+            nomeServicoAgendado = spServicos.getSelectedItem().toString();
+        }
+
+        dataServicoAgendado = canlendarioData.toString();
+        Log.d("TAG", "DATA" + dataServicoAgendado);
+
+        if(rbHora1.isChecked()){
+            horaServicoAgendado = rbHora1.getText().toString();
+        }else if(rbHora2.isChecked()){
+            horaServicoAgendado = rbHora2.getText().toString();
+        }else  if(rbHora3.isChecked()){
+            horaServicoAgendado = rbHora3.getText().toString();
+        }else{
+            horaServicoAgendado = rbHora4.getText().toString();
+        }
+
+        AgendamentoDAO dao = new AgendamentoDAO(this);
+        dao.open();
+        dao.inserir_agendamento(nomeServicoAgendado, dataServicoAgendado, horaServicoAgendado);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle("Agendamento realizado com sucesso!");
@@ -70,6 +114,10 @@ public class AgendamentoServicos extends AppCompatActivity {
         });
         alertaDeAgendamento = builder.create();
         alertaDeAgendamento.show();
+
+        Intent intent = new Intent(AgendamentoServicos.this, TelaNavegacaoEmpresa.class);
+        //intent.putExtra("nomeServicoAgendado", nomeServicoAgendado);
+        startActivity(intent);
     }
 
     public void maaisInfo(View v){

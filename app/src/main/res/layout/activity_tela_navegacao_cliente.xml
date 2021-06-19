@@ -7,6 +7,7 @@
     android:background="#B5CCCB"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
+    tools:openDrawer="start"
     tools:context=".usuario.TelaNavegacaoCliente">
 
     <LinearLayout
@@ -28,22 +29,87 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="363dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <ListView
                     android:id="@+id/listView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></ListView>
-            </LinearLayout>
+                    android:layout_width="413dp"
+                    android:layout_height="274dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.039">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="600dp"
-                android:orientation="horizontal"/>
+                </ListView>
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="205dp"
+                    android:layout_height="180dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/listView"
+                    app:layout_constraintVertical_bias="0.151"
+                    app:srcCompat="@drawable/calendar" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="302dp"
+                    android:layout_height="104dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+                    app:layout_constraintVertical_bias="0.774"
+                    app:srcCompat="@drawable/infobeauty_logo1" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meus agendamentos"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButton6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton6"
+                    app:layout_constraintVertical_bias="0.888" />
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="205dp"
+                    android:layout_height="180dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton6"
+                    app:layout_constraintTop_toBottomOf="@+id/listView"
+                    app:layout_constraintVertical_bias="0.151"
+                    app:srcCompat="@drawable/ic_logo_button_c" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Localização"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.802"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton8"
+                    app:layout_constraintVertical_bias="0.888" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </FrameLayout>
 
