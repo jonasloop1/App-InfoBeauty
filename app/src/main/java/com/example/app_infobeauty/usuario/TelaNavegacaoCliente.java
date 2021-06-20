@@ -10,6 +10,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.app_infobeauty.TelaInicial;
+import com.example.app_infobeauty.activities_substituintes_frag_c.MeuPerfil_c;
+import com.example.app_infobeauty.activities_substituintes_frag_c.MeusAgendamentos_c;
 import com.example.app_infobeauty.agendamento.AgendamentoServicos;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
@@ -39,6 +41,7 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
     private EmpresaDAO dao;
     private String[] servicos;
     private  long[] idServicos;
+    private int imgs[] = {R.drawable.barber};
     Intent intent;
 
     @Override
@@ -103,16 +106,20 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch ((item.getItemId())){
             case R.id.nav_perfil_c:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MeuPerfilFragment_c()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        //new MeuPerfilFragment_c()).commit();
+                Intent intentu = new Intent(this, MeuPerfil_c.class);
+                startActivity(intentu);
                 break;
             case R.id.nav_location_c:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new LocalizacaoFragment_c()).commit();
                 break;
             case R.id.nav_agendamentos_c:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MeusAgendamentosFragment_c()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        //new MeusAgendamentosFragment_c()).commit();
+                Intent intent = new Intent(this, MeusAgendamentos_c.class);
+                startActivity(intent);
                 break;
             case R.id.nav_favoritos_c:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -136,6 +143,11 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    public void meus_agendamentos(View v){
+        Intent intent = new Intent(TelaNavegacaoCliente.this, MeusAgendamentos_c.class);
+        startActivity(intent);
     }
 
     @Override

@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.TelaInicial;
-import com.example.app_infobeauty.activities_substituintes_frag.MeuEstabelecimento_e;
+import com.example.app_infobeauty.activities_substituintes_frag_e.MeuEstabelecimento_e;
 import com.example.app_infobeauty.fragment_e.AgendamentosFragment_e;
 import com.example.app_infobeauty.fragment_e.ConfiguracaoFragment_e;
 import com.example.app_infobeauty.fragment_e.LocalizacaoFragment_e;

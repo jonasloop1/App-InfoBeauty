@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities_substituintes_frag.MeuEstabelecimento_e"
+            android:name=".activities_substituintes_frag_c.MeuPerfil_c"
+            android:exported="true" />
+        <activity
+            android:name=".activities_substituintes_frag_c.MeusAgendamentos_c"
+            android:exported="true" />
+        <activity
+            android:name=".activities_substituintes_frag_e.MeuEstabelecimento_e"
             android:exported="true" />
         <activity
             android:name=".agendamento.AgendamentoServicos"

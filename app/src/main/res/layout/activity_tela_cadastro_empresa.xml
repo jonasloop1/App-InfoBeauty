@@ -151,14 +151,13 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/proximoEmpresaCadastro"
+            android:id="@+id/ProximoEmpresaCadastrar"
             android:layout_width="317dp"
             android:layout_height="49dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             app:backgroundTint="#605A58"
-            tools:text="CADASTRAR" />
-
+            android:text="Cadastrar" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>

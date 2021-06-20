@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.example.app_infobeauty.MaskEditUtil;
 import com.example.app_infobeauty.R;
-import com.example.app_infobeauty.activities_substituintes_frag.MeuEstabelecimento_e;
 
 public class TelaCadastroEmpresa extends AppCompatActivity {
 
@@ -23,7 +22,7 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
         setContentView(R.layout.activity_tela_cadastro_empresa);
 
 
-        proximoEmpresaCadastro = (Button) findViewById(R.id.proximoEmpresaCadastro);
+        proximoEmpresaCadastro = (Button) findViewById(R.id.ProximoEmpresaCadastrar);
         nomeEmpresa = (EditText) findViewById(R.id.nomeEmpresa);
         enderecoEmpresa = (EditText) findViewById(R.id.enderecoEmpresa);
         emailEmpresa = (EditText) findViewById(R.id.emailEmpresa);
@@ -45,11 +44,6 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
                 senha_empresa = senhaEmpresa.getText().toString();
                 confirmasenha_empresa = confirmasenhaEmpresa.getText().toString();
 
-                Intent intent = new Intent(getApplicationContext(), MeuEstabelecimento_e.class);
-                intent.putExtra("nomeEstabelecimento", nome_empresa);
-                intent.putExtra("enderecoEstabelecimento", endereco_empresa);
-                intent.putExtra("emailEstabelecimento", email_empresa);
-                intent.putExtra("cnpjEstabelecimento", cnpj_empresa);
 
                 if (nome_empresa.equals("")){
                     Toast.makeText(TelaCadastroEmpresa.this, "Preencha o Nome do Estabelecimento Por favor!", Toast.LENGTH_SHORT).show();

@@ -5,78 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B5CCCB"
-    tools:context=".activities_substituintes_frag_e.MeuEstabelecimento_e">
+    tools:context=".activities_substituintes_frag_c.MeuPerfil_c">
 
     <TextView
+        android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Meu estabelecimento"
+        android:text="Meu perfil"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.063" />
 
     <EditText
-        android:id="@+id/edtNomeEstabelecimento"
-        android:layout_width="315dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
-
-    <EditText
-        android:id="@+id/edtEnderecoEstabelecimento"
-        android:layout_width="315dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
-
-    <EditText
-        android:id="@+id/edtEmailEstabelecimento"
-        android:layout_width="315dp"
+        android:id="@+id/edtNomeUsuario"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.406" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <EditText
-        android:id="@+id/edtCnpjEstabelecimento"
-        android:layout_width="315dp"
-        android:layout_height="50dp"
+        android:id="@+id/edtEmailUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.513" />
+        app:layout_constraintVertical_bias="0.364" />
+
+    <EditText
+        android:id="@+id/edtCpfUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="160dp"
-        android:layout_height="48dp"
+        android:id="@+id/button5"
+        android:layout_width="162dp"
+        android:layout_height="52dp"
         android:background="@drawable/button_style"
         android:text="Atualizar dados"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,6 +73,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768" />
-
+        app:layout_constraintVertical_bias="0.701" />
 </androidx.constraintlayout.widget.ConstraintLayout>

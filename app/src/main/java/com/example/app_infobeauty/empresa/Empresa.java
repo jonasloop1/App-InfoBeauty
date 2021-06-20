@@ -78,14 +78,4 @@ public class Empresa {
         item += "\nEndereço: " +getEndereco_empresa();
         return item;
     }
-
-    public String textoLista2() {
-        String item;
-        item = "Nome do estabelecimento: "+getNome_empresa();
-        item += "\nEndereço: " +getEndereco_empresa();
-        item += "\nEmail: " +getEmail_empresa();
-        item += "\nCNPJ: " +getCnpj_empresa();
-        return item;
-    }
-
 }

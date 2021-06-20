@@ -1,24 +1,15 @@
-package com.example.app_infobeauty.activities_substituintes_frag;
+package com.example.app_infobeauty.activities_substituintes_frag_e;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.app_infobeauty.R;
-import com.example.app_infobeauty.agendamento.AgendamentoServicos;
-import com.example.app_infobeauty.empresa.Empresa;
 import com.example.app_infobeauty.empresa.EmpresaDAO;
 
-import java.util.Iterator;
-import java.util.List;
-
-public class MeuEstabelecimento_e extends AppCompatActivity implements  AdapterView.OnItemClickListener{
+public class MeuEstabelecimento_e extends AppCompatActivity /*implements  AdapterView.OnItemClickListener*/{
 
     EditText nomeEstab, enderecoEstab, emailEstab, cnpjEstab;
     ListView lista;
@@ -31,27 +22,33 @@ public class MeuEstabelecimento_e extends AppCompatActivity implements  AdapterV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meu_estabelecimento_e);
 
-        lista = (ListView) findViewById(R.id.listViewDadosEmpresa);
+        /*lista = (ListView) findViewById(R.id.listViewDadosEmpresa);
         dao = new EmpresaDAO(this);
         dao.open();
-        lista.setOnItemClickListener(this);
+        lista.setOnItemClickListener(this);*/
 
-        /*nomeEstab = (EditText) findViewById(R.id.edtNomeEstabelecimento);
+        nomeEstab = (EditText) findViewById(R.id.edtNomeEstabelecimento);
         enderecoEstab = (EditText) findViewById(R.id.edtEnderecoEstabelecimento);
         emailEstab = (EditText) findViewById(R.id.edtEmailEstabelecimento);
         cnpjEstab = (EditText) findViewById(R.id.edtCnpjEstabelecimento);
 
-        nomeEstab.setText(getIntent().getExtras().getString("nomeEstabelecimento"));
+        /*nomeEstab.setText(getIntent().getExtras().getString("nomeEstabelecimento"));
         enderecoEstab.setText(getIntent().getExtras().getString("enderecoEstabelecimento"));
         emailEstab.setText(getIntent().getExtras().getString("emailEstabelecimento"));
         cnpjEstab.setText(getIntent().getExtras().getString("cnpjEstabelecimento"));*/
+
+
+        nomeEstab.setText("teste");
+        enderecoEstab.setText("teste");
+        emailEstab.setText("teste");
+        cnpjEstab.setText("teste");
     }
 
-    @Override
+    /*@Override
     protected void onResume(){
         dao.open();
         super.onResume();
-        List<Empresa> listaDeDados = dao.getAll();
+        List<Empresa> listaDeDados = dao.getDados();
         dados = new String[listaDeDados.size()];
         idDados = new long[listaDeDados.size()];
         int i = 0;
@@ -73,5 +70,5 @@ public class MeuEstabelecimento_e extends AppCompatActivity implements  AdapterV
         Intent intent = new Intent(getApplicationContext(), AgendamentoServicos.class);
         intent.putExtra("acao", 0);
         intent.putExtra("id", id);
-    }
+    }*/
 }

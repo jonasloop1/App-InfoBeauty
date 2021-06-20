@@ -113,4 +113,26 @@ public class EmpresaDAO {
         return empresas;
     }
 
+    public List<Empresa> getDados() {
+        List<Empresa> empresas = new ArrayList<Empresa>();
+        Cursor cursor = database.query(InfoBeautySQLiteOpenHelper.TABELA_EMPRESA, columns, null, null, null, null, null);
+        // confirma o ponteiro do arquivo na primeira posição da tabela
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {// pega cada elemento da tabela e insere na lista
+            Empresa empresa = new Empresa();
+            empresa.setId_empresa(cursor.getLong(0));
+            empresa.setNome_empresa(cursor.getString(1));
+            empresa.setEndereco_empresa(cursor.getString(2));
+            empresa.setEmail_empresa(cursor.getString(3));
+            empresa.setCnpj_empresa(cursor.getString(4));
+            empresa.setSenha_empresa(cursor.getString(5));
+            empresas.add(empresa);
+            cursor.moveToNext();
+        }
+        // fecha o cursor
+        cursor.close();
+        // retorna a lista com as disciplinas
+        return empresas;
+    }
+
 }

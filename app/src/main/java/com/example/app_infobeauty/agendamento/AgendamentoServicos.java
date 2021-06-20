@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
@@ -25,6 +26,7 @@ import java.util.ArrayList;
 public class AgendamentoServicos extends AppCompatActivity {
 
     Spinner spServicos, spHorarios;
+    EditText nomeEmpresaAgenda;
     RadioButton rbHora1, rbHora2, rbHora3, rbHora4;
     Button confirmarAgenda, bt1_h, bt2_h, bt3_h, bt4_h;
     ImageView buttonMaisInformacoes;
@@ -42,6 +44,8 @@ public class AgendamentoServicos extends AppCompatActivity {
         rbHora2 = (RadioButton) findViewById(R.id.rbHora2);
         rbHora3 = (RadioButton) findViewById(R.id.rbHora3);
         rbHora4 = (RadioButton) findViewById(R.id.rbHora4);
+        nomeEmpresaAgenda = (EditText) findViewById(R.id.edtNomeEstabelecimentoAgenda);
+        nomeEmpresaAgenda.setText("Barber Max");
 
        /* bt1_h = (Button) findViewById(R.id.bt1);
         bt2_h = (Button) findViewById(R.id.bt2);
@@ -117,7 +121,6 @@ public class AgendamentoServicos extends AppCompatActivity {
         alertaDeAgendamento.show();
 
         Intent intent = new Intent(AgendamentoServicos.this, TelaNavegacaoCliente.class);
-        //intent.putExtra("nomeServicoAgendado", nomeServicoAgendado);
         startActivity(intent);
     }
 
@@ -137,19 +140,5 @@ public class AgendamentoServicos extends AppCompatActivity {
         });
         alertaDeAgendamento = builder.create();
         alertaDeAgendamento.show();
-    }
-
-
-    public void bt1(View v){
-        Toast.makeText(AgendamentoServicos.this, "11:00 da manhã!", Toast.LENGTH_SHORT).show();
-    }
-    public void bt2(View v){
-        Toast.makeText(AgendamentoServicos.this, "13:00 da tarde!", Toast.LENGTH_SHORT).show();
-    }
-    public void bt3(View v){
-        Toast.makeText(AgendamentoServicos.this, "15:00 da tarde!", Toast.LENGTH_SHORT).show();
-    }
-    public void bt4(View v){
-        Toast.makeText(AgendamentoServicos.this, "17:00 da tarde!", Toast.LENGTH_SHORT).show();
     }
 }
