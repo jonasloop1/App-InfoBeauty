@@ -156,9 +156,8 @@
             android:layout_height="49dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:onClick="Inserir_empresa"
-            android:text="Cadastrar"
-            app:backgroundTint="#605A58" />
+            app:backgroundTint="#605A58"
+            tools:text="CADASTRAR" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

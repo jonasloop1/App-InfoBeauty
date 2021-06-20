@@ -10,11 +10,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.TelaInicial;
+import com.example.app_infobeauty.activities_substituintes_frag.MeuEstabelecimento_e;
 import com.example.app_infobeauty.fragment_e.AgendamentosFragment_e;
 import com.example.app_infobeauty.fragment_e.ConfiguracaoFragment_e;
 import com.example.app_infobeauty.fragment_e.LocalizacaoFragment_e;
@@ -68,8 +70,8 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
             case R.id.nav_estabelecimento:
                // getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                  //       new MeuEstabelecimentoFragment_e()).commit();
-              //  intent = new Intent(getApplicationContext(), MeuEstabelecimento.class);
-                //startActivity(intent);
+                intent = new Intent(TelaNavegacaoEmpresa.this, MeuEstabelecimento_e.class);
+                startActivity(intent);
             break;
             case R.id.nav_meus_servicos:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -105,6 +107,11 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    public void meuEstabelecimento(View v){
+        intent = new Intent(TelaNavegacaoEmpresa.this, MeuEstabelecimento_e.class);
+        startActivity(intent);
     }
 
     @Override
