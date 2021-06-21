@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.app_infobeauty.InfoMaps;
 import com.example.app_infobeauty.TelaInicial;
 import com.example.app_infobeauty.activities_substituintes_frag_c.MeuPerfil_c;
 import com.example.app_infobeauty.activities_substituintes_frag_c.MeusAgendamentos_c;
@@ -147,6 +148,11 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
 
     public void meus_agendamentos(View v){
         Intent intent = new Intent(TelaNavegacaoCliente.this, MeusAgendamentos_c.class);
+        startActivity(intent);
+    }
+
+    public void chamar_maps(View v){
+        Intent intent = new Intent(TelaNavegacaoCliente.this, InfoMaps.class);
         startActivity(intent);
     }
 

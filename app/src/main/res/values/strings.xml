@@ -27,5 +27,6 @@
         <item>15:10 até 16:00</item>
         <item>16:10 até 17:00</item>
     </string-array>
+    <string name="title_activity_info_maps">InfoMaps</string>
 
 </resources>
