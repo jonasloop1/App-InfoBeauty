@@ -19,8 +19,6 @@ import com.example.app_infobeauty.empresa.Empresa;
 import com.example.app_infobeauty.empresa.EmpresaDAO;
 import com.example.app_infobeauty.fragment_c.AjudaFragment_c;
 import com.example.app_infobeauty.fragment_c.LocalizacaoFragment_c;
-import com.example.app_infobeauty.fragment_c.MeuPerfilFragment_c;
-import com.example.app_infobeauty.fragment_c.MeusAgendamentosFragment_c;
 import com.example.app_infobeauty.fragment_c.MeusFavoritos_c;
 import com.example.app_infobeauty.fragment_e.AdicionarServicosFragment_e;
 import com.google.android.material.navigation.NavigationView;

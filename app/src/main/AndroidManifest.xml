@@ -27,10 +27,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="AIzaSyDHvOAD4pt5-CWS5Ck--G-K6FvWgBAAu8Y" />
 
         <activity
             android:name=".InfoMaps"
