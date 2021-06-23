@@ -18,7 +18,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.app_infobeauty.R;
-import com.example.app_infobeauty.empresa.TelaNavegacaoEmpresa;
 import com.example.app_infobeauty.usuario.TelaNavegacaoCliente;
 
 import java.util.ArrayList;
@@ -113,8 +112,7 @@ public class AgendamentoServicos extends AppCompatActivity {
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
-                Toast.makeText(AgendamentoServicos.this, "✓", Toast.LENGTH_SHORT).show();
-                finish();
+               Toast.makeText(AgendamentoServicos.this, "✓", Toast.LENGTH_SHORT).show();
             }
         });
         alertaDeAgendamento = builder.create();

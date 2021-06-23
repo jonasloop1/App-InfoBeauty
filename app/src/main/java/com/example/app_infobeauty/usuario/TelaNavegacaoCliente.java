@@ -13,6 +13,7 @@ import com.example.app_infobeauty.InfoMaps;
 import com.example.app_infobeauty.TelaInicial;
 import com.example.app_infobeauty.activities_substituintes_frag_c.MeuPerfil_c;
 import com.example.app_infobeauty.activities_substituintes_frag_c.MeusAgendamentos_c;
+import com.example.app_infobeauty.activities_substituintes_frag_c.MeusFavoritoss_c;
 import com.example.app_infobeauty.agendamento.AgendamentoServicos;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
@@ -111,8 +112,10 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
                 startActivity(intentu);
                 break;
             case R.id.nav_location_c:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new LocalizacaoFragment_c()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        //new LocalizacaoFragment_c()).commit();
+                Intent intentM = new Intent(this, InfoMaps.class);
+                startActivity(intentM);
                 break;
             case R.id.nav_agendamentos_c:
                 //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -121,8 +124,10 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
                 startActivity(intent);
                 break;
             case R.id.nav_favoritos_c:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MeusFavoritos_c()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        //new MeusFavoritos_c()).commit();
+                Intent intentF = new Intent(this, MeusFavoritoss_c.class);
+                startActivity(intentF);
                 break;
             case R.id.nav_configure_c:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

@@ -14,9 +14,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.app_infobeauty.InfoMaps;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.TelaInicial;
+import com.example.app_infobeauty.activities_substituintes_frag_e.Agendamentos_e;
 import com.example.app_infobeauty.activities_substituintes_frag_e.MeuEstabelecimento_e;
+import com.example.app_infobeauty.activities_substituintes_frag_e.MeusServicos_e;
 import com.example.app_infobeauty.fragment_e.AgendamentosFragment_e;
 import com.example.app_infobeauty.fragment_e.ConfiguracaoFragment_e;
 import com.example.app_infobeauty.fragment_e.LocalizacaoFragment_e;
@@ -74,16 +77,22 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
                 startActivity(intent);
             break;
             case R.id.nav_meus_servicos:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MeusServicosFragment_e()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        //new MeusServicosFragment_e()).commit();
+                Intent intentS = new Intent(TelaNavegacaoEmpresa.this, MeusServicos_e.class);
+                startActivity(intentS);
                 break;
             case R.id.nav_location:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new LocalizacaoFragment_e()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        //new LocalizacaoFragment_e()).commit();
+                Intent intentL = new Intent(TelaNavegacaoEmpresa.this, InfoMaps.class);
+                startActivity(intentL);
                 break;
             case R.id.nav_agendamentos:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new AgendamentosFragment_e()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        //new AgendamentosFragment_e()).commit();
+                Intent intentA = new Intent(TelaNavegacaoEmpresa.this, Agendamentos_e.class);
+                startActivity(intentA);
                 break;
             case R.id.nav_adicionar_servicos:
                // getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -111,6 +120,21 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
 
     public void meuEstabelecimento(View v){
         intent = new Intent(TelaNavegacaoEmpresa.this, MeuEstabelecimento_e.class);
+        startActivity(intent);
+    }
+
+    public void addServicos(View v){
+        Intent intent = new Intent(TelaNavegacaoEmpresa.this, ServicosEmpresas.class);
+        startActivity(intent);
+    }
+
+    public void meusServicos(View v){
+        Intent intent = new Intent(TelaNavegacaoEmpresa.this, MeusServicos_e.class);
+        startActivity(intent);
+    }
+
+    public void agendamentosss(View v){
+        Intent intent = new Intent(TelaNavegacaoEmpresa.this, Agendamentos_e.class);
         startActivity(intent);
     }
 

@@ -38,10 +38,10 @@ public class MeuEstabelecimento_e extends AppCompatActivity /*implements  Adapte
         cnpjEstab.setText(getIntent().getExtras().getString("cnpjEstabelecimento"));*/
 
 
-        nomeEstab.setText("teste");
-        enderecoEstab.setText("teste");
-        emailEstab.setText("teste");
-        cnpjEstab.setText("teste");
+        nomeEstab.setText("Barber Max");
+        enderecoEstab.setText("Rua avenida das americas");
+        emailEstab.setText("barbermax@gmail.com");
+        cnpjEstab.setText("98.575.124/0001-13");
     }
 
     /*@Override
