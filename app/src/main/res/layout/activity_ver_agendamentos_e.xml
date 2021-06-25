@@ -20,43 +20,28 @@
         app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
     <TextView
-        android:id="@+id/textView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jonas Silva"
+        android:id="@+id/textNomeU"
+        android:layout_width="192dp"
+        android:layout_height="38dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView13"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.032" />
 
     <TextView
-        android:id="@+id/textView39"
-        android:layout_width="198dp"
-        android:layout_height="34dp"
-        android:text="jonas@gmail.com"
+        android:id="@+id/textEmailU"
+        android:layout_width="209dp"
+        android:layout_height="36dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.572"
+        app:layout_constraintHorizontal_bias="0.594"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView33"
-        app:layout_constraintVertical_bias="0.024" />
-
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="254dp"
-        android:layout_height="38dp"
-        android:text="Rua avenida das americas"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView39"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintTop_toBottomOf="@+id/textNomeU"
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/textView41"
@@ -69,7 +54,20 @@
         app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintVertical_bias="0.477" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="126dp"
+        android:layout_height="46dp"
+        android:text="Serviços:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView42"
+        app:layout_constraintVertical_bias="0.228" />
 
     <TextView
         android:id="@+id/textView42"
@@ -82,20 +80,7 @@
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView41"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <TextView
-        android:id="@+id/textView43"
-        android:layout_width="235dp"
-        android:layout_height="45dp"
-        android:text="Serviços solicitado:"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.193"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
-        app:layout_constraintVertical_bias="0.307" />
+        app:layout_constraintVertical_bias="0.163" />
 
     <Button
         android:id="@+id/button2"

@@ -1,12 +1,11 @@
 package com.example.app_infobeauty.usuario;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +18,7 @@ public class TelaCadastroUsuario extends AppCompatActivity {
 
     EditText nomeUsuario, emailUsuario, cpfUsuario, senhaUsuario, confirmasenhaUsuario;
     Button cadastroUsuario;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class TelaCadastroUsuario extends AppCompatActivity {
         confirmasenhaUsuario = (EditText) findViewById(R.id.confirmasenhaUsuario);
 
         cpfUsuario.addTextChangedListener(MaskEditUtil.mask(cpfUsuario, MaskEditUtil.FORMAT_CPF));
+        prefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
         cadastroUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +44,12 @@ public class TelaCadastroUsuario extends AppCompatActivity {
                 cpf_usuario = cpfUsuario.getText().toString();
                 senha_usuario = senhaUsuario.getText().toString();
                 confirmasenha_usuario = confirmasenhaUsuario.getText().toString();
+
+                SharedPreferences.Editor editor = prefs.edit();
+
+                editor.putString("Nome", nome_usuario);
+                editor.putString("Email", email_usuario);
+                editor.commit();
 
 
                 if (nome_usuario.equals("")){

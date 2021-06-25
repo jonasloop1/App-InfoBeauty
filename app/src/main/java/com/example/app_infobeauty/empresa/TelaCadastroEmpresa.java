@@ -2,7 +2,9 @@ package com.example.app_infobeauty.empresa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +17,7 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
 
     EditText nomeEmpresa, emailEmpresa,enderecoEmpresa, cnpjEmpresa, senhaEmpresa,confirmasenhaEmpresa;
     Button proximoEmpresaCadastro;
+    SharedPreferences prefsEmpresa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
         confirmasenhaEmpresa = (EditText) findViewById(R.id.confirmasenhaEmpresa);
 
         cnpjEmpresa.addTextChangedListener(MaskEditUtil.mask(cnpjEmpresa, MaskEditUtil.FORMAT_CNPJ));
+        prefsEmpresa = getSharedPreferences("MyPrefsEmpresa", Context.MODE_PRIVATE);
 
         proximoEmpresaCadastro.setOnClickListener(new View.OnClickListener() {
 
@@ -43,6 +47,12 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
                 cnpj_empresa = cnpjEmpresa.getText().toString();
                 senha_empresa = senhaEmpresa.getText().toString();
                 confirmasenha_empresa = confirmasenhaEmpresa.getText().toString();
+
+                SharedPreferences.Editor editorE = prefsEmpresa.edit();
+
+                editorE.putString("NomeEmpresa", nome_empresa);
+                editorE.commit();
+
 
 
                 if (nome_empresa.equals("")){

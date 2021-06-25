@@ -3,8 +3,10 @@ package com.example.app_infobeauty.agendamento;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -44,7 +46,12 @@ public class AgendamentoServicos extends AppCompatActivity {
         rbHora3 = (RadioButton) findViewById(R.id.rbHora3);
         rbHora4 = (RadioButton) findViewById(R.id.rbHora4);
         nomeEmpresaAgenda = (EditText) findViewById(R.id.edtNomeEstabelecimentoAgenda);
-        nomeEmpresaAgenda.setText("Barber Max");
+
+        SharedPreferences prefsE = getApplicationContext().getSharedPreferences("MyPrefsEmpresa", Context.MODE_PRIVATE);
+
+        String nomeEmpresaX = prefsE.getString("NomeEmpresa", "");
+
+        nomeEmpresaAgenda.setText(nomeEmpresaX);
 
        /* bt1_h = (Button) findViewById(R.id.bt1);
         bt2_h = (Button) findViewById(R.id.bt2);

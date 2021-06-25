@@ -47,9 +47,10 @@ public class Agendamento {
     // método de formatação dos dados para exibição na lista
     public String textoLista() {
         String item;
-        item = "Agendamento feito por: ";
+        item = "Agendamento realizado por um cliente!";
+        item += "\nClique para ver mais informações.";
         item += "\nHorário: " + getHorario_agendamento();
-        item += "\nServiços: " + getServicos_spinner();
+        item += "\nServiço: " + getServicos_spinner();
         return item;
     }
 }

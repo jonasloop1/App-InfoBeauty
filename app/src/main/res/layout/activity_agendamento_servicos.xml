@@ -14,7 +14,6 @@
         android:layout_width="236dp"
         android:layout_height="53dp"
         android:ems="10"
-        android:hint="Nome do estabelecimento"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
