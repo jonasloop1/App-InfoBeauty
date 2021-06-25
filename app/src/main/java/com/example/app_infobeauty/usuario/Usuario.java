@@ -63,7 +63,7 @@ public class Usuario {
     }
 
     // método de formatação dos dados para exibição na lista
-    public String textoLista() {
+    public String textoListaUsuario() {
         String item;
         item = "Nome do Usuario: "+getNome_usuario();
         item += "\nEmail: " + getEmail_usuario();

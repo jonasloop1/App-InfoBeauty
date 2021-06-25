@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".empresa.VerAgendamentos_e"
+            android:exported="true" />
+        <activity
             android:name=".activities_substituintes_frag_e.MeusServicos_e"
             android:exported="true" />
         <activity
