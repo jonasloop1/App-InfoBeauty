@@ -115,6 +115,7 @@
         android:layout_height="wrap_content"
         android:onClick="Inserir_servicos"
         android:text="Próximo"
+        android:textColor="#FFFFFF"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -137,6 +137,7 @@
             android:layout_marginBottom="20dp"
             android:onClick="Inserir_usuario"
             android:text="Cadastrar"
+            android:textColor="#FFFFFF"
             app:backgroundTint="#605A58" />
 
 

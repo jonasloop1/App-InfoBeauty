@@ -90,6 +90,7 @@
         android:layout_height="49dp"
         android:onClick="login_empresa"
         android:text="Entrar"
+        android:textColor="#FFFFFF"
         app:backgroundTint="#605A58"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

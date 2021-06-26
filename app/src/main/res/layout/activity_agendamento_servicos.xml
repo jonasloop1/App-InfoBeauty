@@ -17,10 +17,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toEndOf="@+id/buttonMaisInfon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <Button
         android:id="@+id/buttonConfirmAgenda"
@@ -29,6 +29,7 @@
         android:background="@drawable/button_style"
         android:onClick="alertaDeAgendamento"
         android:text="CONFIRMAR AGENDAMENTO"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,10 +45,10 @@
         android:entries="@array/servicos"
         app:layout_constraintBottom_toTopOf="@+id/calendario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtNomeEstabelecimentoAgenda"
-        app:layout_constraintVertical_bias="0.527" />
+        app:layout_constraintVertical_bias="0.161" />
 
     <CalendarView
         android:id="@+id/calendario"
@@ -70,10 +71,10 @@
         android:onClick="maaisInfo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007"
+        app:layout_constraintVertical_bias="0.057"
         app:srcCompat="@drawable/infobeauty_logo2" />
 
     <RadioGroup

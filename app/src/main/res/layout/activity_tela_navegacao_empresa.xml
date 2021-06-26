@@ -137,6 +137,18 @@
                     app:layout_constraintTop_toTopOf="@+id/imageButton"
                     app:layout_constraintVertical_bias="0.888" />
 
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+                    app:layout_constraintVertical_bias="0.094" />
+
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="304dp"
@@ -146,7 +158,7 @@
                     app:layout_constraintHorizontal_bias="0.495"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageButton4"
-                    app:layout_constraintVertical_bias="0.449"
+                    app:layout_constraintVertical_bias="0.251"
                     app:srcCompat="@drawable/infobeauty_logo1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </FrameLayout>

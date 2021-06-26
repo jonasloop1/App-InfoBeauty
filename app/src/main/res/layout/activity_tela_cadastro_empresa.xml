@@ -156,8 +156,9 @@
             android:layout_height="49dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            app:backgroundTint="#605A58"
-            android:text="Cadastrar" />
+            android:text="Cadastrar"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#605A58" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>

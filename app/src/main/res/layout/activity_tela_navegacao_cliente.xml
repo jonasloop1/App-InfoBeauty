@@ -33,6 +33,17 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintBottom_toTopOf="@+id/imageButton6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/listView"
+                    app:layout_constraintVertical_bias="0.566" />
+
                 <ListView
                     android:id="@+id/listView"
                     android:layout_width="413dp"
@@ -41,8 +52,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.039">
-                </ListView>
+                    app:layout_constraintVertical_bias="0.039"></ListView>
 
                 <ImageButton
                     android:id="@+id/imageButton6"
@@ -66,7 +76,7 @@
                     app:layout_constraintHorizontal_bias="0.495"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageButton6"
-                    app:layout_constraintVertical_bias="0.774"
+                    app:layout_constraintVertical_bias="0.485"
                     app:srcCompat="@drawable/infobeauty_logo1" />
 
                 <TextView
