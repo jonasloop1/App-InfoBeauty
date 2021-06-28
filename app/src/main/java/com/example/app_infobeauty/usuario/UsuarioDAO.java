@@ -109,18 +109,7 @@ public class UsuarioDAO {
         // retorna a lista com as disciplinas
         return usuarios;
     }
-/*
-        public Usuario ValidaLogin(String email_usuario, String senha_usuario) {
-            Cursor cursor = database.query(InfoBeautySQLiteOpenHelper.TABELA_USUARIO,
-                    columns, InfoBeautySQLiteOpenHelper.COLUNA_EMAIL_USUARIO + "=?" + email_usuario +
-                            InfoBeautySQLiteOpenHelper.COLUNA_SENHA_USUARIO + "=?" + senha_usuario, null,null, null, null);
-            cursor.moveToFirst();
-            Usuario usuario = new Usuario();
-            usuario.setEmail_usuario(cursor.getString(0));
-            usuario.setSenha_usuario(cursor.getString(1));
-            cursor.close();
-            return usuario;
-        }*/
+
         public String ValidarLogin(String email_usuario, String senha_usuario){
             Cursor cursor = database1.rawQuery("SELECT * FROM TABELA_USUARIO WHERE COLUNA_EMAIL_USUARIO=? AND COLUNA_SENHA_USUARIO=?", new String[]{email_usuario,senha_usuario});
 
@@ -128,7 +117,5 @@ public class UsuarioDAO {
                 return "OK";
             }
             return "ERRO";
-
         }
-
 }

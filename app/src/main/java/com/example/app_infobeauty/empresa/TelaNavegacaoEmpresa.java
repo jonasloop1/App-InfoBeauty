@@ -6,52 +6,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.app_infobeauty.InfoMaps;
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.TelaInicial;
 import com.example.app_infobeauty.activities_substituintes_frag_e.Agendamentos_e;
+import com.example.app_infobeauty.activities_substituintes_frag_e.Configuracao_e;
 import com.example.app_infobeauty.activities_substituintes_frag_e.MeuEstabelecimento_e;
 import com.example.app_infobeauty.activities_substituintes_frag_e.MeusServicos_e;
-import com.example.app_infobeauty.fragment_e.AgendamentosFragment_e;
-import com.example.app_infobeauty.fragment_e.ConfiguracaoFragment_e;
-import com.example.app_infobeauty.fragment_e.LocalizacaoFragment_e;
-import com.example.app_infobeauty.fragment_e.MeusServicosFragment_e;
 import com.google.android.material.navigation.NavigationView;
 
 
 public class TelaNavegacaoEmpresa extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
-    EditText estabelecimento, endereco, email, cnpj;
     Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_navegacao_empresa);
-
-/*
-        estabelecimento = findViewById(R.id.edtNomeEstabelecimento);
-        endereco = findViewById(R.id.edtEnderecoEstabelecimento);
-        email = findViewById(R.id.edtEmailEstabelecimento);
-        cnpj = findViewById(R.id.edtCnpjEstabelecimento);
-
-        final Intent itEstabelecimento = getIntent();
-        final Empresa empresa = (Empresa) itEstabelecimento.getExtras().getSerializable("objEstabelecimento");
-        estabelecimento.setText(empresa.getNome_empresa());
-        endereco.setText(empresa.getEndereco_empresa());
-        email.setText(empresa.getEmail_empresa());
-        cnpj.setText(empresa.getCnpj_empresa());
-*/
-
 
         Toolbar toolbar = findViewById(R.id.toolbar);
 
@@ -101,8 +79,10 @@ public class TelaNavegacaoEmpresa extends AppCompatActivity implements Navigatio
                 startActivity(intent);
                 break;
             case R.id.nav_configure:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ConfiguracaoFragment_e()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        //new ConfiguracaoFragment_e()).commit();
+                Intent intentC = new Intent(this, Configuracao_e.class);
+                startActivity(intentC);
                 break;
             case R.id.nav_help:
                 Toast.makeText(this, "Ajuda", Toast.LENGTH_SHORT).show();

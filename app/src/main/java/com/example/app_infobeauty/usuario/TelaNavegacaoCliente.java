@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.app_infobeauty.InfoMaps;
 import com.example.app_infobeauty.TelaInicial;
+import com.example.app_infobeauty.activities_substituintes_frag_c.Configuracao_c;
 import com.example.app_infobeauty.activities_substituintes_frag_c.MeuPerfil_c;
 import com.example.app_infobeauty.activities_substituintes_frag_c.MeusAgendamentos_c;
 import com.example.app_infobeauty.activities_substituintes_frag_c.MeusFavoritoss_c;
@@ -19,6 +20,7 @@ import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.empresa.Empresa;
 import com.example.app_infobeauty.empresa.EmpresaDAO;
 import com.example.app_infobeauty.fragment_c.AjudaFragment_c;
+import com.example.app_infobeauty.fragment_c.ConfiguracaoFragment_c;
 import com.example.app_infobeauty.fragment_c.LocalizacaoFragment_c;
 import com.example.app_infobeauty.fragment_c.MeusFavoritos_c;
 import com.example.app_infobeauty.fragment_e.AdicionarServicosFragment_e;
@@ -130,8 +132,10 @@ public class TelaNavegacaoCliente extends AppCompatActivity implements Navigatio
                 startActivity(intentF);
                 break;
             case R.id.nav_configure_c:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new AdicionarServicosFragment_e()).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        //new ConfiguracaoFragment_c()).commit();
+                Intent intentC = new Intent(this, Configuracao_c.class);
+                startActivity(intentC);
                 break;
 
             case R.id.nav_help_c:

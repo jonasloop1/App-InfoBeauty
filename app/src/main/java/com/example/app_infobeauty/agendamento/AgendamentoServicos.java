@@ -2,7 +2,6 @@ package com.example.app_infobeauty.agendamento;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,18 +17,16 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.example.app_infobeauty.R;
 import com.example.app_infobeauty.usuario.TelaNavegacaoCliente;
-
 import java.util.ArrayList;
 
 public class AgendamentoServicos extends AppCompatActivity {
 
-    Spinner spServicos, spHorarios;
+    Spinner spServicos;
     EditText nomeEmpresaAgenda;
     RadioButton rbHora1, rbHora2, rbHora3, rbHora4;
-    Button confirmarAgenda, bt1_h, bt2_h, bt3_h, bt4_h;
+    Button confirmarAgenda;
     ImageView buttonMaisInformacoes;
     CalendarView canlendarioData;
     private AlertDialog alertaDeAgendamento;
@@ -53,13 +50,8 @@ public class AgendamentoServicos extends AppCompatActivity {
 
         nomeEmpresaAgenda.setText(nomeEmpresaX);
 
-       /* bt1_h = (Button) findViewById(R.id.bt1);
-        bt2_h = (Button) findViewById(R.id.bt2);
-        bt3_h = (Button) findViewById(R.id.bt3);
-        bt4_h = (Button) findViewById(R.id.bt4);*/
         spServicos = (Spinner) findViewById(R.id.spinnerServicos);
         canlendarioData = (CalendarView) findViewById(R.id.calendario);
-        //spHorarios = (Spinner) findViewById(R.id.spinnerHorarios);
 
         ArrayList<String> listServ = new ArrayList<>();
         listServ.add("Serviços disponiveis");
@@ -70,17 +62,6 @@ public class AgendamentoServicos extends AppCompatActivity {
         spServicos.setAdapter(new ArrayAdapter<>(AgendamentoServicos.this,
                 android.R.layout.simple_spinner_dropdown_item, listServ));
 
-
-        /*ArrayList<String> listHora = new ArrayList<>();
-        listHora.add("Horários disponiveis");
-        listHora.add("13:00 até 14:00");
-        listHora.add("15:00 até 16:00");
-        listHora.add("16:00 até 17:00");
-        listHora.add("17:00 até 18:00");
-
-        spHorarios.setAdapter(new ArrayAdapter<>(AgendamentoServicos.this,
-                android.R.layout.simple_spinner_dropdown_item, listHora));
-    }*/
     }
 
     public void alertaDeAgendamento(View v){

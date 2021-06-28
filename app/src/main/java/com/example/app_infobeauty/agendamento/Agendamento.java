@@ -53,4 +53,11 @@ public class Agendamento {
         item += "\nServiço: " + getServicos_spinner();
         return item;
     }
+
+    public String textoListaFavoritos() {
+        String item;
+        item = "Esse é um de seus estabelecimentos favoritos!";
+        item += "\n\t\t\t\t\ttClique para ver mais informações.";
+        return item;
+    }
 }

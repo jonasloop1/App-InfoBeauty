@@ -33,7 +33,7 @@ public class TelaCadastroUsuario extends AppCompatActivity {
         confirmasenhaUsuario = (EditText) findViewById(R.id.confirmasenhaUsuario);
 
         cpfUsuario.addTextChangedListener(MaskEditUtil.mask(cpfUsuario, MaskEditUtil.FORMAT_CPF));
-        prefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        prefs = getSharedPreferences("MyPrefsUser", Context.MODE_PRIVATE);
 
         cadastroUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +49,7 @@ public class TelaCadastroUsuario extends AppCompatActivity {
 
                 editor.putString("Nome", nome_usuario);
                 editor.putString("Email", email_usuario);
+                editor.putString("cpf", cpf_usuario);
                 editor.commit();
 
 

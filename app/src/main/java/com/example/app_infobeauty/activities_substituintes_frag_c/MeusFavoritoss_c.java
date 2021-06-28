@@ -48,7 +48,7 @@ public class MeusFavoritoss_c extends AppCompatActivity implements AdapterView.O
         while (iterator.hasNext()){
             Agendamento aux = new Agendamento();
             aux = (Agendamento) iterator.next();
-            agendamentos[i] = aux.textoLista();
+            agendamentos[i] = aux.textoListaFavoritos();
             idAgendamentos[i] = aux.getId_agendamento();
             i++;
         }

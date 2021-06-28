@@ -51,6 +51,9 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
                 SharedPreferences.Editor editorE = prefsEmpresa.edit();
 
                 editorE.putString("NomeEmpresa", nome_empresa);
+                editorE.putString("EndereçoEmpresa", endereco_empresa);
+                editorE.putString("EmailEmpresa", email_empresa);
+                editorE.putString("Cnpj", cnpj_empresa);
                 editorE.commit();
 
 
@@ -83,10 +86,4 @@ public class TelaCadastroEmpresa extends AppCompatActivity {
             }
         });
     }
-
-    /*Intent intent = new Intent(getApplicationContext(), MeuEstabelecimento_e.class);
-        intent.putExtra("nomeEstabelecimento", nome_empresa);
-        intent.putExtra("enderecoEstabelecimento", endereco_empresa);
-        intent.putExtra("emailEstabelecimento", email_empresa);
-        intent.putExtra("cnpjEstabelecimento", cnpj_empresa);*/
 }

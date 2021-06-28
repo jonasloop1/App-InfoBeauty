@@ -10,7 +10,6 @@ import android.widget.Button;
 import com.example.app_infobeauty.R;
 
 public class TelaEscolhaUsuario extends AppCompatActivity {
-    Button button_tela_login_usuario, button_tela_cadastro_usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

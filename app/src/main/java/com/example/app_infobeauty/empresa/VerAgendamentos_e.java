@@ -22,7 +22,7 @@ public class VerAgendamentos_e extends AppCompatActivity {
         nomeUser = (TextView) findViewById(R.id.textNomeU);
         emailUser = (TextView) findViewById(R.id.textEmailU);
 
-        SharedPreferences prefsA = getApplicationContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences prefsA = getApplicationContext().getSharedPreferences("MyPrefsUser", Context.MODE_PRIVATE);
 
         String nomeX = prefsA.getString("Nome", "");
         String EmailX = prefsA.getString("Email", "");

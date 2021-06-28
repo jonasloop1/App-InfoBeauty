@@ -11,7 +11,6 @@ import com.example.app_infobeauty.empresa.TelaEscolhaEmpresa;
 import com.example.app_infobeauty.usuario.TelaEscolhaUsuario;
 
 public class TelaInicial extends AppCompatActivity {
-    Button button_chamar_tela_escolha_usuario, button_chamar_tela_escolha_empresa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
